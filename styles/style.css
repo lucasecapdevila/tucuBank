@@ -1,0 +1,22 @@
+:root{
+    --color: #072146;
+}
+
+.bg-custom{
+    background-color: var(--color) !important;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+/* Colores blancos para los links del nav */
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+/*  hover para los links */
+.navbar .nav-link:hover {
+    color: grey !important;
+}
