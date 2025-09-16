@@ -5,6 +5,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+:root{
+    --color: #072146;
+}
+
 /* ===== UTILIDADES REUTILIZABLES ===== */
 .text-primary-white { color: #e8e9ea; }
 .text-secondary-white { color: #d1d3d4; }
@@ -402,3 +406,130 @@ body {
     width: 40%;
   }
 }
+
+.bg-custom{
+    background-color: var(--color) !important;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+/* Colores blancos para los links del nav */
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+/*  hover para los links */
+.navbar .nav-link:hover {
+    color: grey !important;
+}
+
+/* explicado en criollo, esto hace que el link de la página en la que estás ejemplo: Cuentas, resalte fuerte por que el html tiene active al lado de nav link. */
+.navbar .nav-link.active{
+    color: #fff !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Accesibilidad: foco visible al navegar con teclado */
+.navbar a:focus-visible{
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* el boton ingresar para pc.*/
+.btn-ingresar{
+    font-weight: 600;
+    border-width: 2px;
+    padding: .45rem 1rem;
+}
+
+/* tenia que hacer mobile firts, pero re colgue y hice desktop primero, chupenla si no les gusta. */
+@media (max-width: 991.98px){
+    .btn-ingresar{
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+    }
+
+    /* Links un toque mejor para mobile */
+    .navbar-collapse .nav-link{
+    padding: .75rem .5rem;
+    border-radius: .5rem;}
+
+      /* Feedback al tocar */
+    .navbar-collapse .nav-link:active{
+    background: lightgray;
+    }
+
+}
+ .footer-bg {
+            background-color: #f8f9fa;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-tiktok { background-color: #000; color: white; }
+        .social-instagram { background-color: #E4405F; color: white; }
+        .social-twitter { background-color: #1DA1F2; color: white; }
+        .social-linkedin { background-color: #0077B5; color: white; }
+        .social-icon:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        .footer-link {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #0066cc;
+        }
+        .footer-title {
+            color: #0066cc;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        .btn-download {
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 12px;
+            width: 200px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .btn-green {
+            background-color: #0066cc;
+            color: white;
+        }
+        .btn-orange {
+            background-color: #000;
+            color: white;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        .tucubank-logo {
+            color: #0066cc;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
