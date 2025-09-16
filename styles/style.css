@@ -20,3 +20,44 @@
 .navbar .nav-link:hover {
     color: grey !important;
 }
+
+/* explicado en criollo, esto hace que el link de la página en la que estás ejemplo: Cuentas, resalte fuerte por que el html tiene active al lado de nav link. */
+.navbar .nav-link.active{
+    color: #fff !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Accesibilidad: foco visible al navegar con teclado */
+.navbar a:focus-visible{
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* el boton ingresar para pc.*/
+.btn-ingresar{
+    font-weight: 600;
+    border-width: 2px;
+    padding: .45rem 1rem;
+}
+
+/* tenia que hacer mobile firts, pero re colgue y hice desktop primero, chupenla si no les gusta. */
+@media (max-width: 991.98px){
+    .btn-ingresar{
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+    }
+
+    /* Links un toque mejor para mobile */
+    .navbar-collapse .nav-link{
+    padding: .75rem .5rem;
+    border-radius: .5rem;}
+
+      /* Feedback al tocar */
+    .navbar-collapse .nav-link:active{
+    background: lightgray;
+    }
+
+}
