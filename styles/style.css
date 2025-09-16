@@ -1,99 +1,231 @@
- .footer-bg {
-            background-color: #f8f9fa;
-        }
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .social-tiktok { background-color: #000; color: white; }
-        .social-instagram { background-color: #E4405F; color: white; }
-        .social-twitter { background-color: #1DA1F2; color: white; }
-        .social-linkedin { background-color: #0077B5; color: white; }
-        .social-icon:hover {
-            transform: translateY(-2px);
-            color: white;
-        }
-        .footer-link {
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 1.6;
-            transition: color 0.3s ease;
-        }
-        .footer-link:hover {
-            color: #0066cc;
-        }
-        .footer-title {
-            color: #0066cc;
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-        .btn-download {
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 12px;
-            width: 200px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .btn-green {
-            background-color: #0066cc;
-            color: white;
-        }
-        .btn-orange {
-            background-color: #000;
-            color: white;
-        }
-        .btn-download:hover {
-            transform: translateY(-2px);
-            color: white;
-        }
-        .tucubank-logo {
-            color: #0066cc;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+.footer-bg {
+  background-color: #f8f9fa;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-tiktok {
+  background-color: #000;
+  color: white;
+}
+.social-instagram {
+  background-color: #e4405f;
+  color: white;
+}
+.social-twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+.social-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+.social-icon:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #0066cc;
+}
+.footer-title {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.btn-download {
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.btn-green {
+  background-color: #0066cc;
+  color: white;
+}
+.btn-orange {
+  background-color: #000;
+  color: white;
+}
+.btn-download:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.tucubank-logo {
+  color: #0066cc;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-        /* Estilos para el carousel */
-        .carousel {
-            max-height: 400px;
-            overflow: hidden;
-        }
-        
-        .carousel-item {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .carousel-item img {
-            height: 400px;
-            object-fit: cover;
-            object-position: center;
-            position: relative;
-            z-index: 0;
-        }
-        
-        /* Overlay negro para oscurecer las imágenes */
-        .carousel-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            pointer-events: none;
-            z-index: 1;
-        }
+/* Estilos para el carousel */
+.carousel {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+/* Overlay negro para oscurecer las imágenes */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Estilos para los textos del carousel */
+.carousel-caption {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  right: auto;
+  z-index: 2;
+  padding: 0;
+  text-align: left;
+  max-width: 500px;
+}
+
+.carousel-caption h3 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #e8e9ea;
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+  color: #d1d3d4;
+  line-height: 1.5;
+}
+
+.carousel-caption .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón personalizado amarillo */
+.btn-custom-yellow {
+  background-color: #f9a825 !important;
+  border-color: #f9a825 !important;
+}
+
+/* Estilos alternativos de posicionamiento */
+.carousel-caption.text-center {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 600px;
+}
+
+.carousel-caption.text-right {
+  left: auto;
+  right: 3rem;
+  text-align: right;
+}
+
+/* Centrar absolutamente la primera imagen en desktop */
+.carousel-item:first-child .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  right: auto;
+  width: 100%;
+  max-width: none;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .carousel-caption {
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    max-width: none;
+    text-align: center;
+  }
+
+  .carousel-caption h3 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .carousel-caption.text-center {
+    transform: none;
+    left: 2rem;
+  }
+
+  .carousel-caption.text-right {
+    right: 2rem;
+    text-align: center;
+  }
+
+  /* Reset centrado absoluto en móviles */
+  .carousel-item:first-child .carousel-caption {
+    position: absolute;
+    top: auto;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    transform: none;
+    width: auto;
+    max-width: none;
+  }
+}
