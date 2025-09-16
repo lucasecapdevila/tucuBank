@@ -1,11 +1,52 @@
-/* Aplicar Montserrat globalmente */
+/* ===== IMPORTACIONES Y CONFIGURACIÓN GLOBAL ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.footer-bg {
-  background-color: #f8f9fa;
+/* ===== UTILIDADES REUTILIZABLES ===== */
+.text-primary-white { color: #e8e9ea; }
+.text-secondary-white { color: #d1d3d4; }
+.text-light-white { color: #fff; }
+.z-front { z-index: 10; }
+.z-overlay { z-index: 1; }
+
+/* ===== COLORES DEL SISTEMA ===== */
+.bg-primary-light { background-color: #F5F7FA; }
+.bg-card { background-color: #FFFFFF; }
+.text-primary-dark { color: #0D1B2A; }
+.text-secondary-soft { color: #4A5A6A; }
+.text-primary-action { color: #1E88E5; }
+.text-accent { color: #F9A825; }
+.text-success-soft { color: #2E8B57; }
+.text-error { color: #D32F2F; }
+.bg-accent { background-color: #F9A825; }
+
+/* ===== FOOTER ===== */
+.footer-bg { background-color: #f8f9fa; }
+.tucubank-logo {
+  color: #0066cc;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
 }
+.footer-title {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+.footer-link:hover { color: #0066cc; }
+
+/* Iconos sociales */
 .social-icon {
   width: 40px;
   height: 40px;
@@ -17,42 +58,16 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.social-tiktok {
-  background-color: #000;
-  color: white;
-}
-.social-instagram {
-  background-color: #e4405f;
-  color: white;
-}
-.social-twitter {
-  background-color: #1da1f2;
-  color: white;
-}
-.social-linkedin {
-  background-color: #0077b5;
-  color: white;
-}
 .social-icon:hover {
   transform: translateY(-2px);
   color: white;
 }
-.footer-link {
-  color: #6c757d;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-.footer-link:hover {
-  color: #0066cc;
-}
-.footer-title {
-  color: #0066cc;
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 16px;
-}
+.social-tiktok { background-color: #000; color: white; }
+.social-instagram { background-color: #e4405f; color: white; }
+.social-twitter { background-color: #1da1f2; color: white; }
+.social-linkedin { background-color: #0077b5; color: white; }
+
+/* Botones de descarga */
 .btn-download {
   border-radius: 12px;
   padding: 12px 24px;
@@ -64,45 +79,29 @@ body {
   text-align: center;
   transition: all 0.3s ease;
 }
-.btn-green {
-  background-color: #0066cc;
-  color: white;
-}
-.btn-orange {
-  background-color: #000;
-  color: white;
-}
 .btn-download:hover {
   transform: translateY(-2px);
   color: white;
 }
-.tucubank-logo {
-  color: #0066cc;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-}
+.btn-green { background-color: #0066cc; color: white; }
+.btn-orange { background-color: #000; color: white; }
 
-/* Estilos para el carousel */
+/* ===== CAROUSEL BASE ===== */
 .carousel {
   max-height: 500px;
   overflow: hidden;
 }
-
 .carousel-item {
   position: relative;
   overflow: hidden;
 }
-
 .carousel-item img {
   height: 500px;
   object-fit: cover;
   object-position: center;
-  position: relative;
-  z-index: 0;
 }
 
-/* Overlay negro para oscurecer las imágenes */
+/* Overlay universal */
 .carousel-item::after {
   content: "";
   position: absolute;
@@ -115,7 +114,7 @@ body {
   z-index: 1;
 }
 
-/* Estilos para los textos del carousel */
+/* ===== CAROUSEL CAPTIONS ===== */
 .carousel-caption {
   position: absolute;
   bottom: 3rem;
@@ -126,7 +125,6 @@ body {
   text-align: left;
   max-width: 500px;
 }
-
 .carousel-caption h3 {
   font-size: 2.8rem;
   font-weight: 800;
@@ -134,14 +132,12 @@ body {
   color: #e8e9ea;
   line-height: 1.2;
 }
-
 .carousel-caption p {
   font-size: 1.3rem;
   margin-bottom: 1.8rem;
   color: #d1d3d4;
   line-height: 1.5;
 }
-
 .carousel-caption .btn {
   padding: 12px 30px;
   font-size: 1.1rem;
@@ -151,375 +147,26 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 .carousel-caption .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Botón personalizado amarillo */
-.btn-custom-yellow {
-  background-color: #f9a825 !important;
-  border-color: #f9a825 !important;
-}
-
-/* Nuevos colores siguiendo principios de diseño */
-.bg-primary-light {
-  background-color: #F5F7FA;
-}
-
-.bg-card {
-  background-color: #FFFFFF;
-}
-
-.text-primary-dark {
-  color: #0D1B2A;
-}
-
-.text-secondary-soft {
-  color: #4A5A6A;
-}
-
-.text-primary-action {
-  color: #1E88E5;
-}
-
-.text-accent {
-  color: #F9A825;
-}
-
-.text-success-soft {
-  color: #2E8B57;
-}
-
-.text-error {
-  color: #D32F2F;
-}
-
-.bg-accent {
-  background-color: #F9A825;
-}
-
-/* Estilos para las cards del carousel de McDonalds */
-.mcdonalds-title-card {
-  background: rgba(249, 168, 37, 0.85);
-  backdrop-filter: blur(10px);
-}
-
-.mcdonalds-title-text {
-  font-size: 3.5rem;
-  color: #e8e9ea;
-  z-index: 10;
-  position: relative;
-}
-
-.mcdonalds-subtitle-text {
-  font-size: 1.5rem;
-  color: #d1d3d4;
-  z-index: 10;
-  position: relative;
-}
-
-.mcdonalds-cashback-title {
-  font-size: 2.5rem;
-  color: #e8e9ea;
-  z-index: 10;
-  position: relative;
-}
-
-.mcdonalds-cashback-amount {
-  font-size: 3rem;
-  color: #e8e9ea;
-  z-index: 10;
-  position: relative;
-}
-
-/* Contenedores de texto con z-index alto */
-.mcdonalds-text-container {
-  z-index: 10;
-  position: relative;
-}
-
-.mcdonalds-cashback-card {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
-  width: 100%;
-  max-width: none;
-}
-
-.mcdonalds-cashback-badge {
-  background: rgba(249, 168, 37, 0.4);
-  color: #0D1B2A;
-}
-
-.mcdonalds-bigmac-card {
-  background: rgba(211, 47, 47, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 150px;
-  border: 2px solid rgba(211, 47, 47, 0.8) !important;
-}
-
-.mcdonalds-nuggets-card {
-  background: rgba(46, 139, 87, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 150px;
-  border: 2px solid rgba(46, 139, 87, 0.8) !important;
-}
-
-.mcdonalds-postres-card {
-  background: rgba(30, 136, 229, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 150px;
-  border: 2px solid rgba(30, 136, 229, 0.8) !important;
-}
-
-.mcdonalds-validez-card {
-  background: rgba(74, 90, 106, 0.4);
-  backdrop-filter: blur(10px);
-  min-width: 140px;
-  border: 2px solid rgba(74, 90, 106, 0.8) !important;
-}
-
-.mcdonalds-app-card {
-  background: rgba(13, 27, 42, 0.4);
-  backdrop-filter: blur(10px);
-}
-
-.mcdonalds-small-text {
-  font-size: 0.85rem;
-}
-
-/* Posicionamiento específico para cards de McDonalds */
-.mcdonalds-bigmac-position {
-  top: 20%;
-  transform: translateX(-50px);
-}
-
-.mcdonalds-nuggets-position {
-  top: 15%;
-}
-
-.mcdonalds-postres-position {
-  top: 65%;
-  transform: translateX(-50px);
-}
-
-.mcdonalds-app-position {
-  transform: translateX(-30px);
-}
-
-/* Responsive para McDonalds cards */
-@media (max-width: 767.98px) {
-  /* Ocultar cards posicionadas absolutamente en móviles */
-  .mcdonalds-bigmac-position,
-  .mcdonalds-nuggets-position,
-  .mcdonalds-postres-position {
-    display: none !important;
-  }
-  
-  /* Container para las 4 cards en fila */
-  .mcdonalds-mobile-cards {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    width: 100%;
-  }
-  
-  /* Grid de 4 columnas para móvil - Una sola fila */
-  .mcdonalds-mobile-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0.25rem;
-    padding: 0;
-    width: 100%;
-    align-items: stretch;
-    min-height: 80px;
-  }
-  
-  /* Cards más pequeñas para móvil */
-  .mcdonalds-mobile-card {
-    min-width: auto !important;
-    width: 100%;
-    height: 100%;
-    font-size: 0.75rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .mcdonalds-mobile-card .card-body {
-    padding: 0.5rem 0.25rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-grow: 1;
-  }
-  
-  .mcdonalds-mobile-card .display-5 {
-    font-size: 1.2rem !important;
-  }
-  
-  .mcdonalds-mobile-card h6 {
-    font-size: 0.7rem !important;
-    margin-bottom: 0.2rem !important;
-  }
-  
-  .mcdonalds-mobile-card small {
-    font-size: 0.6rem !important;
-  }
-  
-  .mcdonalds-mobile-card .fas {
-    font-size: 1rem !important;
-    margin-bottom: 0.3rem !important;
-  }
-  
-  .mcdonalds-mobile-card p {
-    font-size: 0.6rem !important;
-    margin-bottom: 0 !important;
-    line-height: 1.2;
-  }
-  
-  /* Ocultar la card de validez en su posición original */
-  .position-absolute.end-0.top-50.translate-middle-y.me-3.me-md-4 {
-    display: none;
-  }
-  
-  /* Ajustes a textos principales */
-  .mcdonalds-title-text {
-    font-size: 2rem !important;
-  }
-  
-  .mcdonalds-subtitle-text {
-    font-size: 1rem !important;
-  }
-  
-  .mcdonalds-cashback-title {
-    font-size: 1.8rem !important;
-  }
-  
-  .mcdonalds-cashback-amount {
-    font-size: 2rem !important;
-  }
-  
-  /* El texto ya está centrado, no necesita reposicionamiento especial */
-}
-
-/* Layout para tablets y desktop (≥768px) */
-@media (min-width: 768px) {
-  /* Ocultar cards posicionadas absolutamente también en este breakpoint */
-  .mcdonalds-bigmac-position,
-  .mcdonalds-nuggets-position,
-  .mcdonalds-postres-position,
-  .position-absolute.end-0.top-50.translate-middle-y.me-1 {
-    display: none !important;
-  }
-  
-  /* Texto a la izquierda */
-  .mcdonalds-text-left {
-    position: absolute;
-    left: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 35%;
-  }
-  
-  /* Container para cards 2x2 a la derecha */
-  .mcdonalds-desktop-cards {
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    width: 45%;
-  }
-  
-  /* Grid 2x2 para desktop */
-  .mcdonalds-desktop-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    height: 200px;
-  }
-  
-  /* Cards para desktop 2x2 */
-  .mcdonalds-desktop-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .mcdonalds-desktop-card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 1rem;
-  }
-  
-  /* Ajuste de tamaños para desktop */
-  .mcdonalds-desktop-card .display-5 {
-    font-size: 1.8rem;
-  }
-  
-  .mcdonalds-desktop-card h6 {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .mcdonalds-desktop-card small {
-    font-size: 0.75rem;
-  }
-  
-  .mcdonalds-desktop-card .fas {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .mcdonalds-desktop-card p {
-    font-size: 0.75rem;
-    margin-bottom: 0;
-    line-height: 1.2;
-    text-align: center;
-  }
-}
-
-/* Layout para desktop grande (≥992px) - Contenido más centrado */
-@media (min-width: 992px) {
-  .mcdonalds-text-left {
-    left: 12%;
-    width: 32%;
-  }
-  
-  .mcdonalds-desktop-cards {
-    right: 12%;
-    width: 40%;
-  }
-}
-
-/* Estilos alternativos de posicionamiento */
+/* Variantes de posicionamiento */
 .carousel-caption.text-center {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   max-width: 600px;
 }
-
 .carousel-caption.text-right {
   left: auto;
   right: 3rem;
   text-align: right;
 }
 
-/* Centrar absolutamente la primera imagen en desktop */
+/* Primera imagen - centrado absoluto */
 .carousel-item:first-child .carousel-caption {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -529,8 +176,61 @@ body {
   max-width: none;
 }
 
-/* Responsive para dispositivos móviles */
-@media (max-width: 768px) {
+/* Botón personalizado */
+.btn-custom-yellow {
+  background-color: #f9a825 !important;
+  border-color: #f9a825 !important;
+}
+
+/* ===== MCDONALDS SECTION ===== */
+/* Textos principales */
+.mcdonalds-title-text {
+  font-size: 3.5rem;
+  color: #e8e9ea;
+  position: relative;
+  z-index: 10;
+}
+.mcdonalds-subtitle-text {
+  font-size: 1.5rem;
+  color: #d1d3d4;
+  position: relative;
+  z-index: 10;
+}
+.mcdonalds-text-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Cards base - estilos comunes */
+.mcdonalds-card {
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  border: 2px solid transparent !important;
+}
+
+/* Colores específicos por tipo de card */
+.mcdonalds-bigmac-card {
+  background: rgba(211, 47, 47, 0.4);
+  border-color: rgba(211, 47, 47, 0.8) !important;
+}
+.mcdonalds-nuggets-card {
+  background: rgba(46, 139, 87, 0.4);
+  border-color: rgba(46, 139, 87, 0.8) !important;
+}
+.mcdonalds-postres-card {
+  background: rgba(30, 136, 229, 0.4);
+  border-color: rgba(30, 136, 229, 0.8) !important;
+}
+.mcdonalds-validez-card {
+  background: rgba(74, 90, 106, 0.4);
+  border-color: rgba(74, 90, 106, 0.8) !important;
+  min-width: 140px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Móviles (<768px) */
+@media (max-width: 767.98px) {
+  /* Carousel captions responsive */
   .carousel-caption {
     left: 2rem;
     right: 2rem;
@@ -538,31 +238,22 @@ body {
     max-width: none;
     text-align: center;
   }
-
-  .carousel-caption h3 {
-    font-size: 2rem;
-  }
-
-  .carousel-caption p {
-    font-size: 1.1rem;
-  }
-
+  .carousel-caption h3 { font-size: 2rem; }
+  .carousel-caption p { font-size: 1.1rem; }
   .carousel-caption .btn {
     padding: 12px 25px;
     font-size: 1rem;
   }
-
   .carousel-caption.text-center {
     transform: none;
     left: 2rem;
   }
-
   .carousel-caption.text-right {
     right: 2rem;
     text-align: center;
   }
-
-  /* Reset centrado absoluto en móviles */
+  
+  /* Primera imagen móvil */
   .carousel-item:first-child .carousel-caption {
     position: absolute;
     top: auto;
@@ -572,5 +263,142 @@ body {
     transform: none;
     width: auto;
     max-width: none;
+  }
+  
+  /* McDonalds móvil */
+  .mcdonalds-bigmac-position,
+  .mcdonalds-nuggets-position,
+  .mcdonalds-postres-position {
+    display: none !important;
+  }
+  
+  .mcdonalds-mobile-cards {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    width: 100%;
+  }
+  
+  .mcdonalds-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem;
+    align-items: stretch;
+    min-height: 80px;
+  }
+  
+  .mcdonalds-mobile-card {
+    min-width: auto !important;
+    width: 100%;
+    height: 100%;
+    font-size: 0.75rem;
+  }
+  .mcdonalds-mobile-card .card-body {
+    padding: 0.5rem 0.25rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .mcdonalds-mobile-card .display-5 { font-size: 1.2rem !important; }
+  .mcdonalds-mobile-card h6 {
+    font-size: 0.7rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .mcdonalds-mobile-card small { font-size: 0.6rem !important; }
+  .mcdonalds-mobile-card .fas {
+    font-size: 1rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  .mcdonalds-mobile-card p {
+    font-size: 0.6rem !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2;
+  }
+  
+  /* Textos principales móvil */
+  .mcdonalds-title-text { font-size: 2rem !important; }
+  .mcdonalds-subtitle-text { font-size: 1rem !important; }
+}
+
+/* Tablets y Desktop (≥768px) */
+@media (min-width: 768px) {
+  /* Ocultar elementos absolutamente posicionados */
+  .mcdonalds-bigmac-position,
+  .mcdonalds-nuggets-position,
+  .mcdonalds-postres-position {
+    display: none !important;
+  }
+  
+  /* Layout 2 columnas para McDonalds */
+  .mcdonalds-text-left {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 35%;
+  }
+  
+  .mcdonalds-desktop-cards {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 45%;
+  }
+  
+  .mcdonalds-desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    height: 200px;
+  }
+  
+  .mcdonalds-desktop-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mcdonalds-desktop-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+  }
+  .mcdonalds-desktop-card .display-5 { font-size: 1.8rem; }
+  .mcdonalds-desktop-card h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .mcdonalds-desktop-card small { font-size: 0.75rem; }
+  .mcdonalds-desktop-card .fas {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .mcdonalds-desktop-card p {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+/* Desktop grande (≥992px) */
+@media (min-width: 992px) {
+  .mcdonalds-text-left {
+    left: 12%;
+    width: 32%;
+  }
+  .mcdonalds-desktop-cards {
+    right: 12%;
+    width: 40%;
   }
 }
