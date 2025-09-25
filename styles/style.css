@@ -9,6 +9,14 @@ body {
     --color: #072146;
 }
 
+/* Ajusta el logo dentro del navbar */
+.logo-nav{
+  display: block;        
+  max-height: 100px;        
+  width: auto;            
+  object-fit: contain;     
+}
+
 /* ===== UTILIDADES REUTILIZABLES ===== */
 .text-primary-white { color: #e8e9ea; }
 .text-secondary-white { color: #d1d3d4; }
@@ -533,3 +541,4 @@ body {
             font-weight: bold;
             text-decoration: none;
         }
+
