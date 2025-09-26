@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,299 @@
   <meta name="keywords" content="TucuBank, banco, cuentas, transacciones, finanzas, gestión bancaria">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <title>TucuBank</title>
 </head>
-<body>
-  <header>Header</header>
-  <i class="fa-brands fa-x-twitter"></i>
-  <main>Main</main>
-  <footer>Footer</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <i class="fa-solid fa-piggy-bank"></i>
+          TucuBank
+        </a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navTucu"
+          aria-controls="navTucu" aria-expanded="false" aria-label="Mostrar navegación">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenedor colapsable  -->
+        <div class="collapse navbar-collapse" id="navTucu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/cuentas.html">Cuentas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/prestamos.html">Préstamos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/tarjetas.html">Tarjetas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/ayuda.html">Ayuda</a>
+            </li>
+          </ul>
+          <a class="btn btn-light ms-lg-3 btn-ingresar" href="#">Ingresar</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+    <main>
+        <section>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="./img/dolar.jpeg" class="d-block w-100" alt="Dolares">
+                        <div class="carousel-caption">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-md-8 col-10 text-center">
+                                        <h3>¡Únete a TucuBank!</h3>
+                                        <p>Regístrate hoy y obtén tu cuenta gratis con beneficios exclusivos desde el primer día.</p>
+                                        <a href="#" class="btn btn-primary btn-custom-yellow">Crear Cuenta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./img/mcdonalds.jpg" class="d-block w-100" alt="Menú de McDonalds">
+                        
+                        <!-- Título principal centrado -->
+                        <div class="position-absolute start-50 top-50 translate-middle mcdonalds-text-container w-100 d-block d-md-none">
+                            <div class="text-center">
+                                <h1 class="fw-bold mb-2 mcdonalds-title-text px-1">
+                                    Ofertas Exclusivas pagando con TucuBank
+                                </h1>
+                                <p class="mb-0 mcdonalds-subtitle-text">Descuentos especiales TucuBank</p>
+                            </div>
+                        </div>
+
+                        <!-- Texto a la izquierda para desktop (≥768px) -->
+                        <div class="mcdonalds-text-left d-none d-md-block">
+                            <div class="text-left ps-xxl-5">
+                                <h1 class="fw-bold mb-3 mcdonalds-title-text">
+                                    Ofertas Exclusivas Pagando con TucuBank
+                                </h1>
+                                <p class="mb-4 mcdonalds-subtitle-text">Descuentos especiales en McDonalds</p>
+                            </div>
+                        </div>
+
+                        <!-- Cards 2x2 a la derecha para desktop (≥768px) -->
+                        <div class="mcdonalds-desktop-cards d-none d-md-block">
+                            <div class="mcdonalds-desktop-grid">
+                                <!-- Big Mac -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-desktop-card">
+                                    <div class="card-body text-center">
+                                        <div class="display-5 fw-bold mb-2 text-white">30%</div>
+                                        <h6 class="fw-semibold mb-1 text-white">Big Mac</h6>
+                                        <small class="text-white opacity-75">Descuento especial</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- McNuggets -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-desktop-card">
+                                    <div class="card-body text-center">
+                                        <div class="display-5 fw-bold mb-2 text-white">2x1</div>
+                                        <h6 class="fw-semibold mb-1 text-white">McNuggets</h6>
+                                        <small class="text-white opacity-75">Promoción limitada</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Postres -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-desktop-card">
+                                    <div class="card-body text-center">
+                                        <div class="display-5 fw-bold mb-2 text-white">50%</div>
+                                        <h6 class="fw-semibold mb-1 text-white">Postres</h6>
+                                        <small class="text-white opacity-75">Oferta dulce</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Validez -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-desktop-card">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-clock mb-2 text-white"></i>
+                                        <p class="mb-0 fw-semibold text-white">
+                                            Válido hasta<br>fin de mes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Big Mac - Centro-derecha superior -->
+                        <div class="position-absolute end-0 me-2 mcdonalds-bigmac-position">
+                            <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card">
+                                <div class="card-body text-center p-3">
+                                    <div class="display-5 fw-bold mb-2 text-white">30%</div>
+                                    <h6 class="fw-semibold mb-1 text-white">Big Mac</h6>
+                                    <small class="text-white opacity-75">Descuento especial</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card McNuggets - Derecha superior -->
+                        <div class="position-absolute end-0 me-1 mcdonalds-nuggets-position">
+                            <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card">
+                                <div class="card-body text-center p-3">
+                                    <div class="display-5 fw-bold mb-2 text-white">2x1</div>
+                                    <h6 class="fw-semibold mb-1 text-white">McNuggets</h6>
+                                    <small class="text-white opacity-75">Promoción limitada</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Postres - Centro-derecha inferior -->
+                        <div class="position-absolute end-0 me-2 mcdonalds-postres-position">
+                            <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card">
+                                <div class="card-body text-center p-3">
+                                    <div class="display-5 fw-bold mb-2 text-white">50%</div>
+                                    <h6 class="fw-semibold mb-1 text-white">Postres</h6>
+                                    <small class="text-white opacity-75">Oferta dulce</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cards móviles en fila (solo visible en móviles y tablets) -->
+                        <div class="mcdonalds-mobile-cards d-block d-md-none px-2">
+                            <div class="mcdonalds-mobile-grid">
+                                <!-- Big Mac -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-mobile-card">
+                                    <div class="card-body text-center p-2">
+                                        <div class="display-5 fw-bold mb-1 text-white">30%</div>
+                                        <h6 class="fw-semibold mb-1 text-white">Big Mac</h6>
+                                        <small class="text-white opacity-75">Oferta</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- McNuggets -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-mobile-card">
+                                    <div class="card-body text-center p-2">
+                                        <div class="display-5 fw-bold mb-1 text-white">2x1</div>
+                                        <h6 class="fw-semibold mb-1 text-white">McNuggets</h6>
+                                        <small class="text-white opacity-75">Promo</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Postres -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-mobile-card">
+                                    <div class="card-body text-center p-2">
+                                        <div class="display-5 fw-bold mb-1 text-white">50%</div>
+                                        <h6 class="fw-semibold mb-1 text-white">Postres</h6>
+                                        <small class="text-white opacity-75">Dulce</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Validez -->
+                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-mobile-card">
+                                    <div class="card-body text-center p-2">
+                                        <i class="fas fa-clock mb-1 text-white"></i>
+                                        <p class="mb-0 fw-semibold text-white">
+                                            Hasta<br>fin mes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./img/ropa.jpg" class="d-block w-100" alt="Local de Ropa">
+                        <div class="carousel-caption w-100 text-center">
+                            <h3>Compras Inteligentes con TucuBank</h3>
+                            
+                            <div class="mb-3">
+                                <p class="mb-2"><strong>Descuentos hasta 20%</strong> en tiendas de ropa asociadas</p>
+                                <p class="mb-3"><strong>Programa de puntos</strong> canjeable por más descuentos</p>
+                            </div>
+                            
+                            <p class="mb-3 text-light opacity-75">Únete a más de 50,000 usuarios que ya disfrutan de las mejores ofertas en moda.</p>
+                            
+                            <a href="#" class="btn btn-custom-yellow btn-lg shadow">Explorar Ofertas</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer-bg py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Social Media -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="tucubank-logo mb-3 d-block">tucubank</a>
+                    <div class="social-links mb-4">
+                        <a href="#" class="social-icon social-tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon social-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon social-twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon social-linkedin">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <!-- Download Buttons -->
+                    <div class="download-buttons">
+                        <a href="#" class="btn-download btn-green d-block mb-2">
+                            <i class="fas fa-mobile-alt me-2"></i>
+                            Botón de arrepentimiento
+                        </a>
+                        <a href="#" class="btn-download btn-orange d-block">
+                            <i class="fas fa-shield-alt me-2"></i>
+                            Defensa del Consumidor
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sobre TucuBank -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Sobre TucuBank</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Tienda TucuBank</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Depósitos y extracciones</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Transferencia</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pagos -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">Pagos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Pagos QR</a></li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Tarjeta de crédito</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="footer-link">Pago de servicios</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Información importante -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
