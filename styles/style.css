@@ -277,8 +277,15 @@ body {
 
 /* Botón personalizado */
 .btn-custom-yellow {
-  background-color: #f9a825 !important;
-  border-color: #f9a825 !important;
+  background-color: var(--text-accent) !important;  /* Light: #F9A825, Dark: #FFD54F */
+  border-color: var(--text-accent) !important;
+  color: var(--bg-primary) !important;              /* Light: #F5F7FA, Dark: #0D1B2A para contraste */
+  font-weight: 600;
+}
+
+/* Hover para el botón acento */
+.btn-custom-yellow:hover {
+  opacity: 0.9;
 }
 
 /* ===== MCDONALDS SECTION ===== */
@@ -681,6 +688,27 @@ body {
 }
 
 /* ===== QUINES SOMOS SECTION ===== */
+.quienes-somos-section {
+  background-color: var(--bg-primary); /* Light: #F5F7FA, Dark: #0D1B2A */
+  color: var(--text-primary);          /* Light: #0D1B2A, Dark: #FFFFFF */
+}
+
+/* Títulos principales de la sección */
+.quienes-somos-section .text-primary-action {
+  color: var(--text-action) !important; /* Light: #1E88E5, Dark: #3FA9F5 */
+}
+
+/* Párrafos y texto general */
+.quienes-somos-section p,
+.quienes-somos-section li {
+  color: var(--text-secondary); /* Light: #4A5A6A, Dark: #B0BEC5 */
+}
+
+/* Texto en negrita dentro de la lista de valores */
+.quienes-somos-section li .fw-bold {
+  color: var(--text-accent);     /* Light: #F9A825, Dark: #FFD54F */
+}
+
 @media screen and (min-width: 992px) {
   .quienes-somos-section {
     padding-left: 12rem !important;
