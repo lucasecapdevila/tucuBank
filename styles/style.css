@@ -102,29 +102,29 @@ body {
 
 /* ===== FOOTER ===== */
 .footer-bg {
-  background-color: #f8f9fa;
+  background-color: var(--bg-primary) !important;
 }
 .tucubank-logo {
-  color: #0066cc;
+  color: var(--text-action);
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
 }
 .footer-title {
-  color: #0066cc;
+  color: var(--text-action);
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 16px;
 }
 .footer-link {
-  color: #6c757d;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 14px;
   line-height: 1.6;
   transition: color 0.3s ease;
 }
 .footer-link:hover {
-  color: #0066cc;
+  color: var(--text-action);
 }
 
 /* Iconos sociales */
@@ -601,7 +601,7 @@ body {
   }
 }
 .footer-bg {
-  background-color: #f8f9fa;
+  background-color: var(--bg-primary) !important;
 }
 .social-icon {
   width: 40px;
@@ -635,17 +635,17 @@ body {
   color: white;
 }
 .footer-link {
-  color: #6c757d;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 14px;
   line-height: 1.6;
   transition: color 0.3s ease;
 }
 .footer-link:hover {
-  color: #0066cc;
+  color: var(--text-action);
 }
 .footer-title {
-  color: #0066cc;
+  color: var(--text-action);
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 16px;
@@ -662,19 +662,19 @@ body {
   transition: all 0.3s ease;
 }
 .btn-green {
-  background-color: #0066cc;
+  background-color: var(--text-action);
   color: white;
 }
 .btn-orange {
-  background-color: #000;
-  color: white;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
 }
 .btn-download:hover {
   transform: translateY(-2px);
   color: white;
 }
 .tucubank-logo {
-  color: #0066cc;
+  color: var(--text-action);
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -687,10 +687,3 @@ body {
     padding-right: 12rem !important;
   }
 }
-
-
-
-
-
-
-
