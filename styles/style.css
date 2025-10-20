@@ -46,7 +46,7 @@ body {
   --text-action-rgb: 63, 169, 245;
   --text-success: #66bb6a; /* Éxito / validación */
   --text-error: #ef5350; /* Error / alertas */
-  --border-color: #1b263b; /* Bordes */
+  --border-color: #4a5a6a; /* Bordes */
   --shadow-light: rgba(0, 0, 0, 0.4);
   --shadow-dark: rgba(0, 0, 0, 0.6);
   --overlay-opacity: 0.7;
@@ -179,8 +179,22 @@ textarea.form-control {
 }
 
 .form-control::placeholder {
-    color: var(--text-secondary);
-    opacity: 0.7;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Estilos personalizados para el formulario de contacto en Dark Mode */
+[data-bs-theme="dark"] form.bg-card {
+  background-color: rgb(33, 37, 41) !important; /* Usamos el color específico y !important como refuerzo */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Un borde sutil para definir el contenedor */
+}
+
+[data-bs-theme="dark"] #contacto .form-control {
+  background-color: var(--bg-primary);
+}
+
+[data-bs-theme="dark"] #contacto .form-control:focus {
+  background-color: var(--bg-secondary);
 }
 
 /* Iconos sociales */
