@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link rel="icon" href="img/icono.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/switch.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <title>TucuBank</title>
 </head>
@@ -48,12 +49,18 @@
             </li>
           </ul>
           <a class="btn btn-light ms-lg-3 btn-ingresar" href="#">Ingresar</a>
+
+          <!-- Toggle Dark Mode -->
+          <button class="theme-switch ms-2" id="themeToggle" title="Cambiar tema">
+            <i class="fas fa-moon" id="themeIcon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
         </div>
       </div>
     </nav>
   </header>
   
-    <main class="bg-primary-light">
+    <main>
         <section>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -413,11 +420,11 @@
          </section>
     </main>
 
-            <section id="contacto" class="py-5 bg-light">
+            <section id="contacto" class="py-5">
             <div class="container">
-                <h2 class="mb-4 text-center">Formulario de Contacto</h2>
+                <h2 class="mb-4 text-center text-primary-action text-uppercase fw-bold">Formulario de Contacto</h2>
 
-                <form class="p-4 rounded" style="background:#d9d9d9;">
+                <form class="p-4 rounded shadow-sm bg-card">
                     <div class="row g-3">
                         <div class="col-12 col-md-6">
                             <label for="nombre" class="form-label">Nombre<span class="text-danger">*</span></label>
@@ -452,7 +459,7 @@
             </div>
         </section>
 
-    <footer class="bg-primary-light py-5">
+    <footer class="bg-custom py-5">
         <div class="container">
             <div class="row">
                 <!-- Logo and Social Media -->
@@ -524,6 +531,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
 
 </body>
 
