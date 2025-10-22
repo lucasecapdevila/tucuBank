@@ -793,3 +793,73 @@ textarea.form-control {
     padding-right: 12rem !important;
   }
 }
+
+/* sliders img y coso */
+
+/* === SLIDER DE LOGOS === */
+.logos-slider {
+  background-color: #0b1e35; /* tono acorde al TucuBank */
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-track {
+  display: flex;
+  width: calc(250px * 12); /* 6 logos x 2 duplicados */
+  animation: scroll 30s linear infinite;
+}
+
+.logos-slider:hover .logos-track {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-right: 3rem; /* <-- nuevo: separa el final del bloque y evita el "pegado" */
+}
+
+
+.logos-slide img {
+  max-height: 60px;        /* altura máxima uniforme */
+  max-width: 120px;        /* ancho máximo controlado */
+  width: auto;
+  height: auto;
+  object-fit: contain;     /* mantiene proporciones */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  padding: 8px 12px;       /* espacio interno para respiración */
+  background-color: transparent; /* fondo limpio */
+}
+
+
+.logos-slide img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Aseguramos que no se mueva si el usuario tiene "reduce motion" */
+@media (prefers-reduced-motion: reduce) {
+  .logos-track {
+    animation: none;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .logos-slide img {
+    height: 48px;
+  }
+  .logos-slide {
+    gap: 1.5rem;
+  }
+}
