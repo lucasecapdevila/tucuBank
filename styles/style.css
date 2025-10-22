@@ -1,62 +1,201 @@
 /* ===== IMPORTACIONES Y CONFIGURACIÓN GLOBAL ===== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* Se establecen los colores base para toda la página */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:root{
-    --color: #072146;
+:root {
+  --color: #072146;
+
+  /* Variables para Light Mode */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8f9fa;
+  --text-primary: #0d1b2a;
+  --text-secondary: #4a5a6a;
+  --text-white: #e8e9ea;
+  --text-light: #d1d3d4;
+  --text-accent: #f9a825;
+  --text-action: #1e88e5;
+  --text-action-rgb: 30, 136, 229;
+  --text-success: #2e8b57;
+  --text-error: #d32f2f;
+  --border-color: #e9ecef;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --overlay-opacity: 0.5;
+}
+
+/* Variables para Dark Mode */
+[data-bs-theme="dark"] {
+  --color: #1b263b; /* Color para Navbar y Footer */
+  --bg-primary: #0d1b2a; /* Fondo principal */
+  --bg-secondary: #1b263b; /* Fondo secundario / tarjetas */
+  --bg-tertiary: #1b263b; /* Fondo terciario */
+  --text-primary: #ffffff; /* Texto principal */
+  --text-secondary: #b0bec5; /* Texto secundario */
+  --text-white: #ffffff; /* Texto blanco */
+  --text-light: #b0bec5; /* Texto claro */
+  --text-accent: #ffd54f; /* Color acento */
+  --text-action: #3fa9f5; /* Color primario (acciones, links) */
+  --text-action-rgb: 63, 169, 245;
+  --text-success: #66bb6a; /* Éxito / validación */
+  --text-error: #ef5350; /* Error / alertas */
+  --border-color: #4a5a6a; /* Bordes */
+  --shadow-light: rgba(0, 0, 0, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+  --overlay-opacity: 0.7;
 }
 
 /* Ajusta el logo dentro del navbar */
-.logo-nav{
-  display: block;        
-  max-height: 100px;        
-  width: auto;            
-  object-fit: contain;     
+.logo-nav {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* ===== UTILIDADES REUTILIZABLES ===== */
-.text-primary-white { color: #e8e9ea; }
-.text-secondary-white { color: #d1d3d4; }
-.text-light-white { color: #fff; }
-.z-front { z-index: 10; }
-.z-overlay { z-index: 1; }
+.text-primary-white {
+  color: #e8e9ea;
+}
+.text-secondary-white {
+  color: #d1d3d4;
+}
+.text-light-white {
+  color: #fff;
+}
+.z-front {
+  z-index: 10;
+}
+.z-overlay {
+  z-index: 1;
+}
 
 /* ===== COLORES DEL SISTEMA ===== */
-.bg-primary-light { background-color: #F5F7FA; }
-.bg-card { background-color: #FFFFFF; }
-.text-primary-dark { color: #0D1B2A; }
-.text-secondary-soft { color: #4A5A6A; }
-.text-primary-action { color: #1E88E5; }
-.text-accent { color: #F9A825; }
-.text-success-soft { color: #2E8B57; }
-.text-error { color: #D32F2F; }
-.bg-accent { background-color: #F9A825; }
+.bg-primary-light {
+  background-color: #f5f7fa;
+}
+.bg-card {
+  background-color: var(--bg-secondary);
+}
+.text-primary-dark {
+  color: #0d1b2a;
+}
+.text-secondary-soft {
+  color: #4a5a6a;
+}
+.text-primary-action {
+  color: #1e88e5;
+}
+.text-accent {
+  color: #f9a825;
+}
+.text-success-soft {
+  color: #2e8b57;
+}
+.text-error {
+  color: #d32f2f;
+}
+.bg-accent {
+  background-color: #f9a825;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.form-control {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+.form-control:focus {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--text-action);
+  box-shadow: 0 0 0 0.25rem rgba(var(--text-action-rgb), 0.25); /* Se necesita var --text-action-rgb */
+}
+.form-label {
+  color: var(--text-secondary);
+}
+
+textarea.form-control {
+  resize: none;
+}
 
 /* ===== FOOTER ===== */
-.footer-bg { background-color: #f8f9fa; }
+.footer-bg {
+  /* Mismo fondo azul oscuro del navbar */
+  background-color: var(--color) !important; 
+}
+
+.footer-title,
 .tucubank-logo {
-  color: #0066cc;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+  /* Títulos y logo en blanco, como en el navbar */
+  color: var(--text-white) !important; 
 }
-.footer-title {
-  color: #0066cc;
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 16px;
-}
+
 .footer-link {
-  color: #6c757d;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.6;
-  transition: color 0.3s ease;
+  /* Enlaces en un gris claro para diferenciarse */
+  color: var(--text-light) !important; 
 }
-.footer-link:hover { color: #0066cc; }
+
+.footer-link:hover {
+  /* Hover con el color de acento */
+  color: var(--text-accent) !important; 
+}
+
+/* Ajuste de botones de descarga para el nuevo footer oscuro */
+.footer-bg .btn-download {
+    border: 1px solid var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.footer-bg .btn-download:hover {
+    border-color: var(--text-accent);
+    background-color: transparent;
+}
+
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.form-label {
+    color: var(--text-secondary);
+}
+
+.form-control {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--text-action);
+    box-shadow: 0 0 0 0.2rem rgba(var(--text-action-rgb), 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Estilos personalizados para el formulario de contacto en Dark Mode */
+[data-bs-theme="dark"] form.bg-card {
+  background-color: rgb(33, 37, 41) !important; /* Usamos el color específico y !important como refuerzo */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Un borde sutil para definir el contenedor */
+}
+
+[data-bs-theme="dark"] #contacto .form-control {
+  background-color: var(--bg-primary);
+}
+
+[data-bs-theme="dark"] #contacto .form-control:focus {
+  background-color: var(--bg-secondary);
+}
 
 /* Iconos sociales */
 .social-icon {
@@ -74,10 +213,22 @@ body {
   transform: translateY(-2px);
   color: white;
 }
-.social-tiktok { background-color: #000; color: white; }
-.social-instagram { background-color: #e4405f; color: white; }
-.social-twitter { background-color: #1da1f2; color: white; }
-.social-linkedin { background-color: #0077b5; color: white; }
+.social-tiktok {
+  background-color: #000;
+  color: white;
+}
+.social-instagram {
+  background-color: #e4405f;
+  color: white;
+}
+.social-twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+.social-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
 
 /* Botones de descarga */
 .btn-download {
@@ -95,8 +246,6 @@ body {
   transform: translateY(-2px);
   color: white;
 }
-.btn-green { background-color: #0066cc; color: white; }
-.btn-orange { background-color: #000; color: white; }
 
 /* ===== CAROUSEL BASE ===== */
 .carousel {
@@ -121,7 +270,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, var(--overlay-opacity));
   pointer-events: none;
   z-index: 1;
 }
@@ -141,13 +290,13 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #e8e9ea;
+  color: var(--text-white);
   line-height: 1.2;
 }
 .carousel-caption p {
   font-size: 1.3rem;
   margin-bottom: 1.8rem;
-  color: #d1d3d4;
+  color: var(--text-light);
   line-height: 1.5;
 }
 .carousel-caption .btn {
@@ -157,11 +306,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px var(--shadow-dark);
 }
 .carousel-caption .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px var(--shadow-dark);
 }
 
 /* Variantes de posicionamiento */
@@ -190,21 +339,28 @@ body {
 
 /* Botón personalizado */
 .btn-custom-yellow {
-  background-color: #f9a825 !important;
-  border-color: #f9a825 !important;
+  background-color: var(--text-accent) !important;  /* Light: #F9A825, Dark: #FFD54F */
+  border-color: var(--text-accent) !important;
+  color: var(--bg-primary) !important;              /* Light: #F5F7FA, Dark: #0D1B2A para contraste */
+  font-weight: 600;
+}
+
+/* Hover para el botón acento */
+.btn-custom-yellow:hover {
+  opacity: 0.9;
 }
 
 /* ===== MCDONALDS SECTION ===== */
 /* Textos principales */
 .mcdonalds-title-text {
   font-size: 3.5rem;
-  color: #e8e9ea;
+  color: var(--text-white);
   position: relative;
   z-index: 10;
 }
 .mcdonalds-subtitle-text {
   font-size: 1.5rem;
-  color: #d1d3d4;
+  color: var(--text-light);
   position: relative;
   z-index: 10;
 }
@@ -218,6 +374,8 @@ body {
   backdrop-filter: blur(10px);
   min-width: 150px;
   border: 2px solid transparent !important;
+  background-color: var(--bg-secondary);
+  color: var(--text-white);
 }
 
 /* Colores específicos por tipo de card */
@@ -239,6 +397,27 @@ body {
   min-width: 140px;
 }
 
+/* Colores específicos adaptados para dark mode */
+[data-bs-theme="dark"] .mcdonalds-bigmac-card {
+  background: rgba(239, 83, 80, 0.3);    /* Tu color de error con transparencia */
+  border-color: rgba(239, 83, 80, 0.7) !important;
+}
+
+[data-bs-theme="dark"] .mcdonalds-nuggets-card {
+  background: rgba(102, 187, 106, 0.3);  /* Tu color de éxito con transparencia */
+  border-color: rgba(102, 187, 106, 0.7) !important;
+}
+
+[data-bs-theme="dark"] .mcdonalds-postres-card {
+  background: rgba(63, 169, 245, 0.3);   /* Tu color primario con transparencia */
+  border-color: rgba(63, 169, 245, 0.7) !important;
+}
+
+[data-bs-theme="dark"] .mcdonalds-validez-card {
+  background: rgba(255, 213, 79, 0.3);   /* Tu color acento con transparencia */
+  border-color: rgba(255, 213, 79, 0.7) !important;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 /* Móviles (<768px) */
 @media (max-width: 767.98px) {
@@ -250,8 +429,12 @@ body {
     max-width: none;
     text-align: center;
   }
-  .carousel-caption h3 { font-size: 2rem; }
-  .carousel-caption p { font-size: 1.1rem; }
+  .carousel-caption h3 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
   .carousel-caption .btn {
     padding: 12px 25px;
     font-size: 1rem;
@@ -264,7 +447,7 @@ body {
     right: 2rem;
     text-align: center;
   }
-  
+
   /* Primera imagen móvil */
   .carousel-item:first-child .carousel-caption {
     position: absolute;
@@ -276,14 +459,14 @@ body {
     width: auto;
     max-width: none;
   }
-  
+
   /* McDonalds móvil */
   .mcdonalds-bigmac-position,
   .mcdonalds-nuggets-position,
   .mcdonalds-postres-position {
     display: none !important;
   }
-  
+
   .mcdonalds-mobile-cards {
     position: absolute;
     bottom: 2rem;
@@ -292,7 +475,7 @@ body {
     z-index: 5;
     width: 100%;
   }
-  
+
   .mcdonalds-mobile-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -300,7 +483,7 @@ body {
     align-items: stretch;
     min-height: 80px;
   }
-  
+
   .mcdonalds-mobile-card {
     min-width: auto !important;
     width: 100%;
@@ -315,12 +498,16 @@ body {
     align-items: center;
     height: 100%;
   }
-  .mcdonalds-mobile-card .display-5 { font-size: 1.2rem !important; }
+  .mcdonalds-mobile-card .display-5 {
+    font-size: 1.2rem !important;
+  }
   .mcdonalds-mobile-card h6 {
     font-size: 0.7rem !important;
     margin-bottom: 0.2rem !important;
   }
-  .mcdonalds-mobile-card small { font-size: 0.6rem !important; }
+  .mcdonalds-mobile-card small {
+    font-size: 0.6rem !important;
+  }
   .mcdonalds-mobile-card .fas {
     font-size: 1rem !important;
     margin-bottom: 0.3rem !important;
@@ -330,10 +517,14 @@ body {
     margin-bottom: 0 !important;
     line-height: 1.2;
   }
-  
+
   /* Textos principales móvil */
-  .mcdonalds-title-text { font-size: 2rem !important; }
-  .mcdonalds-subtitle-text { font-size: 1rem !important; }
+  .mcdonalds-title-text {
+    font-size: 2rem !important;
+  }
+  .mcdonalds-subtitle-text {
+    font-size: 1rem !important;
+  }
 }
 
 /* Tablets y Desktop (≥768px) */
@@ -344,7 +535,7 @@ body {
   .mcdonalds-postres-position {
     display: none !important;
   }
-  
+
   /* Layout 2 columnas para McDonalds */
   .mcdonalds-text-left {
     position: absolute;
@@ -354,7 +545,7 @@ body {
     z-index: 10;
     width: 35%;
   }
-  
+
   .mcdonalds-desktop-cards {
     position: absolute;
     right: 8%;
@@ -363,7 +554,7 @@ body {
     z-index: 5;
     width: 45%;
   }
-  
+
   .mcdonalds-desktop-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -371,7 +562,7 @@ body {
     gap: 1rem;
     height: 200px;
   }
-  
+
   .mcdonalds-desktop-card {
     height: 100%;
     display: flex;
@@ -385,12 +576,16 @@ body {
     height: 100%;
     padding: 1rem;
   }
-  .mcdonalds-desktop-card .display-5 { font-size: 1.8rem; }
+  .mcdonalds-desktop-card .display-5 {
+    font-size: 1.8rem;
+  }
   .mcdonalds-desktop-card h6 {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-  .mcdonalds-desktop-card small { font-size: 0.75rem; }
+  .mcdonalds-desktop-card small {
+    font-size: 0.75rem;
+  }
   .mcdonalds-desktop-card .fas {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -415,137 +610,186 @@ body {
   }
 }
 
-.bg-custom{
-    background-color: var(--color) !important;
+.bg-custom {
+  background-color: var(--color) !important;
 }
 
-.navbar-brand{
-    font-weight: 700;
-    letter-spacing: .2px;
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
 /* Colores blancos para los links del nav */
 .navbar .nav-link {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 /*  hover para los links */
 .navbar .nav-link:hover {
-    color: grey !important;
+  color: grey !important;
 }
 
 /* explicado en criollo, esto hace que el link de la página en la que estás ejemplo: Cuentas, resalte fuerte por que el html tiene active al lado de nav link. */
-.navbar .nav-link.active{
-    color: #fff !important;
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+.navbar .nav-link.active {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Accesibilidad: foco visible al navegar con teclado */
-.navbar a:focus-visible{
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+.navbar a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* el boton ingresar para pc.*/
-.btn-ingresar{
-    font-weight: 600;
-    border-width: 2px;
-    padding: .45rem 1rem;
+.btn-ingresar {
+  font-weight: 600;
+  border-width: 2px;
+  padding: 0.45rem 1rem;
 }
 
 /* tenia que hacer mobile firts, pero re colgue y hice desktop primero, chupenla si no les gusta. */
-@media (max-width: 991.98px){
-    .btn-ingresar{
+@media (max-width: 991.98px) {
+  .btn-ingresar {
     display: block;
     width: 100%;
-    margin-top: .5rem;
-    }
+    margin-top: 0.5rem;
+  }
 
-    /* Links un toque mejor para mobile */
-    .navbar-collapse .nav-link{
-    padding: .75rem .5rem;
-    border-radius: .5rem;}
+  /* Links un toque mejor para mobile */
+  .navbar-collapse .nav-link {
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+  }
 
-      /* Feedback al tocar */
-    .navbar-collapse .nav-link:active{
+  /* Feedback al tocar */
+  .navbar-collapse .nav-link:active {
     background: lightgray;
-    }
-
+  }
 }
- .footer-bg {
-            background-color: #f8f9fa;
-        }
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .social-tiktok { background-color: #000; color: white; }
-        .social-instagram { background-color: #E4405F; color: white; }
-        .social-twitter { background-color: #1DA1F2; color: white; }
-        .social-linkedin { background-color: #0077B5; color: white; }
-        .social-icon:hover {
-            transform: translateY(-2px);
-            color: white;
-        }
-        .footer-link {
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 1.6;
-            transition: color 0.3s ease;
-        }
-        .footer-link:hover {
-            color: #0066cc;
-        }
-        .footer-title {
-            color: #0066cc;
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-        .btn-download {
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 12px;
-            width: 200px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .btn-green {
-            background-color: #0066cc;
-            color: white;
-        }
-        .btn-orange {
-            background-color: #000;
-            color: white;
-        }
-        .btn-download:hover {
-            transform: translateY(-2px);
-            color: white;
-        }
-        .tucubank-logo {
-            color: #0066cc;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+.footer-bg {
+  background-color: var(--bg-primary) !important;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-tiktok {
+  background-color: #000;
+  color: white;
+}
+.social-instagram {
+  background-color: #e4405f;
+  color: white;
+}
+.social-twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+.social-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+.social-icon:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: var(--text-action);
+}
+.footer-title {
+  color: var(--text-action);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.btn-download {
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+/* Botón "Arrepentimiento" */
+.btn-green {
+  background-color: var(--text-action);
+  color: var(--text-white);
+  border: 1px solid var(--text-action);
+}
+
+.btn-green:hover {
+   background-color: transparent;
+   color: var(--text-action);
+}
+
+/* Botón "Defensa del Consumidor" - Estilo Inverso Blanco */
+.btn-orange {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--text-white);
+}
+
+.btn-orange:hover {
+  background-color: var(--text-white);
+  color: var(--color); /* El texto toma el color de fondo del footer */
+  border-color: var(--text-white);
+}
+.btn-download:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.tucubank-logo {
+  color: var(--text-action);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /* ===== QUINES SOMOS SECTION ===== */
+.quienes-somos-section {
+  background-color: var(--bg-primary); /* Light: #F5F7FA, Dark: #0D1B2A */
+  color: var(--text-primary);          /* Light: #0D1B2A, Dark: #FFFFFF */
+}
+
+/* Títulos principales de la sección */
+.quienes-somos-section .text-primary-action {
+  color: var(--text-action) !important; /* Light: #1E88E5, Dark: #3FA9F5 */
+}
+
+/* Párrafos y texto general */
+.quienes-somos-section p,
+.quienes-somos-section li {
+  color: var(--text-secondary); /* Light: #4A5A6A, Dark: #B0BEC5 */
+}
+
+/* Texto en negrita dentro de la lista de valores */
+.quienes-somos-section li .fw-bold {
+  color: var(--text-action); /* Antes era --text-accent, ahora es el azul de acciones */
+}
+
 @media screen and (min-width: 992px) {
   .quienes-somos-section {
-      padding-left: 12rem !important;
-      padding-right: 12rem !important;
+    padding-left: 12rem !important;
+    padding-right: 12rem !important;
   }
 }
