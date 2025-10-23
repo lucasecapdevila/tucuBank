@@ -2,76 +2,77 @@
 <html lang="es" data-bs-theme="light">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Singh Bruno, Farías Gonzalo, Capdevila Lucas">
-  <meta name="description" content="Página web de TucuBank, un banco ficticio para la gestión de cuentas y transacciones.">
-  <meta name="keywords" content="TucuBank, banco, cuentas, transacciones, finanzas, gestión bancaria">
-  <link rel="icon" href="img/icono.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/switch.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <title>TucuBank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Singh Bruno, Farías Gonzalo, Capdevila Lucas">
+    <meta name="description"
+        content="Página web de TucuBank, un banco ficticio para la gestión de cuentas y transacciones.">
+    <meta name="keywords" content="TucuBank, banco, cuentas, transacciones, finanzas, gestión bancaria">
+    <link rel="icon" href="img/icono.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/switch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>TucuBank</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="./img/tucubank_logo_transparent.png" alt="Logo TucuBank" class="logo-nav">
-        </a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="./img/tucubank_logo_transparent.png" alt="Logo TucuBank" class="logo-nav">
+                </a>
 
-        <button class="navbar-toggler" type="button"
-          data-bs-toggle="collapse" data-bs-target="#navTucu"
-          aria-controls="navTucu" aria-expanded="false" aria-label="Mostrar navegación">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navTucu"
+                    aria-controls="navTucu" aria-expanded="false" aria-label="Mostrar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Contenedor colapsable  -->
-        <div class="collapse navbar-collapse" id="navTucu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/404.html">Cuentas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/404.html">Préstamos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/404.html">Tarjetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/404.html">Ayuda</a>
-            </li>
-          </ul>
-          <a class="btn btn-light ms-lg-3 btn-ingresar" href="#">Ingresar</a>
+                <!-- Contenedor colapsable  -->
+                <div class="collapse navbar-collapse" id="navTucu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/404.html">Cuentas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/404.html">Préstamos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/404.html">Tarjetas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/404.html">Ayuda</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-light ms-lg-3 btn-ingresar" href="#">Ingresar</a>
 
-          <!-- Toggle Dark Mode -->
-          <button class="theme-switch ms-2" id="themeToggle" title="Cambiar tema">
-            <i class="fas fa-moon" id="themeIcon"></i>
-            <i class="fas fa-sun"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-  
+                    <!-- Toggle Dark Mode -->
+                    <button class="theme-switch ms-2" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <section>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="./img/dolar.jpeg" class="d-block w-100" alt="Dolares">
+                        <img src="./img/dolar.jpeg" class="d-block w-100" alt="Dolares">
                         <div class="carousel-caption">
                             <div class="container-fluid">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-md-8 col-10 text-center">
                                         <h3>¡Únete a TucuBank!</h3>
-                                        <p>Regístrate hoy y obtén tu cuenta gratis con beneficios exclusivos desde el primer día.</p>
+                                        <p>Regístrate hoy y obtén tu cuenta gratis con beneficios exclusivos desde el
+                                            primer día.</p>
                                         <a href="#" class="btn btn-primary btn-custom-yellow">Crear Cuenta</a>
                                     </div>
                                 </div>
@@ -80,9 +81,10 @@
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
                         <img src="./img/mcdonalds.jpg" class="d-block w-100" alt="Menú de McDonalds">
-                        
+
                         <!-- Título principal centrado -->
-                        <div class="position-absolute start-50 top-50 translate-middle mcdonalds-text-container w-100 d-block d-md-none">
+                        <div
+                            class="position-absolute start-50 top-50 translate-middle mcdonalds-text-container w-100 d-block d-md-none">
                             <div class="text-center">
                                 <h1 class="fw-bold mb-2 mcdonalds-title-text px-1">
                                     Ofertas Exclusivas pagando con TucuBank
@@ -105,34 +107,38 @@
                         <div class="mcdonalds-desktop-cards d-none d-md-block">
                             <div class="mcdonalds-desktop-grid">
                                 <!-- Big Mac -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-desktop-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-desktop-card">
                                     <div class="card-body text-center">
                                         <div class="display-5 fw-bold mb-2 text-white">30%</div>
                                         <h6 class="fw-semibold mb-1 text-white">Big Mac</h6>
                                         <small class="text-white opacity-75">Descuento especial</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- McNuggets -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-desktop-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-desktop-card">
                                     <div class="card-body text-center">
                                         <div class="display-5 fw-bold mb-2 text-white">2x1</div>
                                         <h6 class="fw-semibold mb-1 text-white">McNuggets</h6>
                                         <small class="text-white opacity-75">Promoción limitada</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Postres -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-desktop-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-desktop-card">
                                     <div class="card-body text-center">
                                         <div class="display-5 fw-bold mb-2 text-white">50%</div>
                                         <h6 class="fw-semibold mb-1 text-white">Postres</h6>
                                         <small class="text-white opacity-75">Oferta dulce</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Validez -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-desktop-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-desktop-card">
                                     <div class="card-body text-center">
                                         <i class="fas fa-clock mb-2 text-white"></i>
                                         <p class="mb-0 fw-semibold text-white">
@@ -180,34 +186,38 @@
                         <div class="mcdonalds-mobile-cards d-block d-md-none px-2">
                             <div class="mcdonalds-mobile-grid">
                                 <!-- Big Mac -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-mobile-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-bigmac-card mcdonalds-mobile-card">
                                     <div class="card-body text-center p-2">
                                         <div class="display-5 fw-bold mb-1 text-white">30%</div>
                                         <h6 class="fw-semibold mb-1 text-white">Big Mac</h6>
                                         <small class="text-white opacity-75">Oferta</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- McNuggets -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-mobile-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-nuggets-card mcdonalds-mobile-card">
                                     <div class="card-body text-center p-2">
                                         <div class="display-5 fw-bold mb-1 text-white">2x1</div>
                                         <h6 class="fw-semibold mb-1 text-white">McNuggets</h6>
                                         <small class="text-white opacity-75">Promo</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Postres -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-mobile-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-postres-card mcdonalds-mobile-card">
                                     <div class="card-body text-center p-2">
                                         <div class="display-5 fw-bold mb-1 text-white">50%</div>
                                         <h6 class="fw-semibold mb-1 text-white">Postres</h6>
                                         <small class="text-white opacity-75">Dulce</small>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Validez -->
-                                <div class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-mobile-card">
+                                <div
+                                    class="card border border-light shadow-lg mcdonalds-card mcdonalds-validez-card mcdonalds-mobile-card">
                                     <div class="card-body text-center p-2">
                                         <i class="fas fa-clock mb-1 text-white"></i>
                                         <p class="mb-0 fw-semibold text-white">
@@ -219,59 +229,68 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./img/ropa.jpg" class="d-block w-100" alt="Local de Ropa">
+                        <img src="./img/ropa.jpg" class="d-block w-100" alt="Local de Ropa">
                         <div class="carousel-caption w-100 text-center">
                             <h3>Compras Inteligentes con TucuBank</h3>
-                            
+
                             <div class="mb-3">
                                 <p class="mb-2"><strong>Descuentos hasta 20%</strong> en tiendas de ropa asociadas</p>
                                 <p class="mb-3"><strong>Programa de puntos</strong> canjeable por más descuentos</p>
                             </div>
-                            
-                            <p class="mb-3 text-light opacity-75">Únete a más de 50,000 usuarios que ya disfrutan de las mejores ofertas en moda.</p>
-                            
+
+                            <p class="mb-3 text-light opacity-75">Únete a más de 50,000 usuarios que ya disfrutan de las
+                                mejores ofertas en moda.</p>
+
                             <a href="#" class="btn btn-custom-yellow btn-lg shadow">Explorar Ofertas</a>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </section>
 
         <!-- slider y eso, qcyo UWU -->
 
         <section class="logos-slider py-4">
-  <div class="container-fluid">
-    <h3 class="text-center mb-4 text-light fw-semibold">
-      Nuestras empresas afiliadas
-    </h3>
+            <div class="container-fluid">
+                <h3 class="text-center mb-4 text-light fw-semibold">
+                    Nuestras empresas afiliadas
+                </h3>
 
-    <div class="logos-track">
-      <div class="logos-slide">
-        <img src="img/img_sliders/visa.png" alt="Logo de Visa" loading="lazy" decoding="async">
-        <img src="img/img_sliders/mastercard.png" alt="Logo de Mastercard" loading="lazy" decoding="async">
-        <img src="img/img_sliders/mercadopago.png" alt="Logo de Mercado Pago" loading="lazy" decoding="async">
-        <img src="img/img_sliders/YPF.png" alt="Logo de YPF" loading="lazy" decoding="async">
-        <img src="img/img_sliders/carrefour.png" alt="Logo de Carrefour" loading="lazy" decoding="async">
-        <img src="img/img_sliders/musimundo.png" alt="Logo de Musimundo" loading="lazy" decoding="async">
-      </div>
+                <div class="logos-track">
+                    <div class="logos-slide">
+                        <img src="img/img_sliders/visa.png" alt="Logo de Visa" loading="lazy" decoding="async">
+                        <img src="img/img_sliders/mastercard.png" alt="Logo de Mastercard" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/mercadopago.png" alt="Logo de Mercado Pago" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/YPF.png" alt="Logo de YPF" loading="lazy" decoding="async">
+                        <img src="img/img_sliders/carrefour.png" alt="Logo de Carrefour" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/musimundo.png" alt="Logo de Musimundo" loading="lazy"
+                            decoding="async">
+                    </div>
 
-      <!-- duplicado para bucle infinito -->
-      <div class="logos-slide">
-        <img src="img/img_sliders/visa.png" alt="Logo de Visa" loading="lazy" decoding="async">
-        <img src="img/img_sliders/mastercard.png" alt="Logo de Mastercard" loading="lazy" decoding="async">
-        <img src="img/img_sliders/mercadopago.png" alt="Logo de Mercado Pago" loading="lazy" decoding="async">
-        <img src="img/img_sliders/YPF.png" alt="Logo de YPF" loading="lazy" decoding="async">
-        <img src="img/img_sliders/carrefour.png" alt="Logo de Carrefour" loading="lazy" decoding="async">
-        <img src="img/img_sliders/musimundo.png" alt="Logo de Musimundo" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </div>
-</section>
+                    <!-- duplicado para bucle infinito -->
+                    <div class="logos-slide">
+                        <img src="img/img_sliders/visa.png" alt="Logo de Visa" loading="lazy" decoding="async">
+                        <img src="img/img_sliders/mastercard.png" alt="Logo de Mastercard" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/mercadopago.png" alt="Logo de Mercado Pago" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/YPF.png" alt="Logo de YPF" loading="lazy" decoding="async">
+                        <img src="img/img_sliders/carrefour.png" alt="Logo de Carrefour" loading="lazy"
+                            decoding="async">
+                        <img src="img/img_sliders/musimundo.png" alt="Logo de Musimundo" loading="lazy"
+                            decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- cards, y eso -->
 
-                <section class="py-5">
+        <section class="py-5">
             <div class="container">
                 <div class="row g-4">
 
@@ -279,15 +298,15 @@
                         <article class="card h-100 shadow-sm">
                             <div class="row g-0">
                                 <div class="col-12 col-md-4">
-                                    <img src="../img/card1.avif" 
-                                    class="img-fluid w-100 h-100 object-fit-cover" 
-                                    alt="Icono o imagen 1">
+                                    <img src="../img/card1.avif" class="img-fluid w-100 h-100 object-fit-cover"
+                                        alt="Icono o imagen 1">
                                 </div>
 
                                 <div class="col-12 col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title text-uppercase">Cuenta Digital</h5>
-                                        <p class="card-text mb-3">Abrí tu TucuBank en minutos y operá 24/7 desde el celular.</p>
+                                        <p class="card-text mb-3">Abrí tu TucuBank en minutos y operá 24/7 desde el
+                                            celular.</p>
                                         <a href="#" class="btn btn-primary btn-sm">Ver más</a>
                                     </div>
                                 </div>
@@ -299,14 +318,14 @@
                         <article class="card h-100 shadow-sm">
                             <div class="row g-0">
                                 <div class="col-12 col-md-4">
-                                    <img src="../img/card2.jpg" 
-                                        class="img-fluid w-100 h-100 object-fit-cover"
+                                    <img src="../img/card2.jpg" class="img-fluid w-100 h-100 object-fit-cover"
                                         alt="Icono o imagen 2">
                                 </div>
                                 <div class="col-12 col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title text-uppercase">Tarjetas</h5>
-                                        <p class="card-text mb-3">Crédito y débito con beneficios y cuotas en comercios aliados.</p>
+                                        <p class="card-text mb-3">Crédito y débito con beneficios y cuotas en comercios
+                                            aliados.</p>
                                         <a href="#" class="btn btn-primary btn-sm">Ver más</a>
                                     </div>
                                 </div>
@@ -318,14 +337,14 @@
                         <article class="card h-100 shadow-sm">
                             <div class="row g-0">
                                 <div class="col-12 col-md-4">
-                                    <img src="../img/card3.jpeg"
-                                    class="img-fluid w-100 h-100 object-fit-cover"
-                                    alt="Icono o imagen 3">
+                                    <img src="../img/card3.jpeg" class="img-fluid w-100 h-100 object-fit-cover"
+                                        alt="Icono o imagen 3">
                                 </div>
                                 <div class="col-12 col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title text-uppercase">Préstamos</h5>
-                                        <p class="card-text mb-3">Solicitá online y recibí el dinero en tu cuenta en el día.</p>
+                                        <p class="card-text mb-3">Solicitá online y recibí el dinero en tu cuenta en el
+                                            día.</p>
                                         <a href="#" class="btn btn-primary btn-sm">Ver más</a>
                                     </div>
                                 </div>
@@ -337,14 +356,14 @@
                         <article class="card h-100 shadow-sm">
                             <div class="row g-0">
                                 <div class="col-12 col-md-4">
-                                    <img src="../img/card4.png"
-                                    class="img-fluid w-100 h-100 object-fit-cover"
-                                    alt="Icono o imagen 4">
+                                    <img src="../img/card4.png" class="img-fluid w-100 h-100 object-fit-cover"
+                                        alt="Icono o imagen 4">
                                 </div>
                                 <div class="col-12 col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title text-uppercase">Seguros</h5>
-                                        <p class="card-text mb-3">Protegé tus compras y tus viajes con coberturas flexibles.</p>
+                                        <p class="card-text mb-3">Protegé tus compras y tus viajes con coberturas
+                                            flexibles.</p>
                                         <a href="#" class="btn btn-primary btn-sm">Ver más</a>
                                     </div>
                                 </div>
@@ -353,111 +372,155 @@
                     </div>
                 </div>
 
-        <!-- SECCION QUINES SOMOS -->
-        <section class="quienes-somos-section mt-4 p-2 px-sm-4 px-md-5">
-            <div class="flex-column justify-content-center">
-                <h2 class="text-center text-uppercase fw-bold text-primary-action mb-4">Quienes somos</h2>
-                <p>
-                    En TucuBank somos una billetera virtual en crecimiento que nace con un propósito claro: hacer que el manejo del dinero sea más simple, seguro y accesible para todos. Creemos que las finanzas digitales no deberían ser complicadas ni exclusivas, sino una herramienta cotidiana que mejore la vida de las personas.
-                    Nuestra plataforma permite enviar, recibir, pagar y administrar dinero de manera rápida e intuitiva, sin necesidad de trámites engorrosos ni procesos innecesarios. Queremos que cada usuario sienta que tiene en sus manos un banco del futuro, pero con la facilidad de una app que lo acompaña en su día a día.
-                </p>
-                <h3 class="text-primary-action">Nuestra misión</h3>
-                <p>
-                    Impulsar la inclusión financiera y brindar soluciones digitales que permitan a cada persona gestionar su dinero de forma confiable, transparente y ágil.
-                </p>
-                <h3 class="text-primary-action">Nuestra visión</h3>
-                <p>
-                    Convertirnos en la billetera digital líder de la región, reconocida por su innovación, cercanía con los usuarios y compromiso con la seguridad.
-                </p>
-                <h3 class="text-primary-action">Nuestros valores</h3>
-                <ul>
-                    <li><span class="fw-bold">Seguridad:</span> Tu dinero y tu información siempre protegidos.</li>
-                    <li><span class="fw-bold">Innovación:</span> Buscamos constantemente nuevas formas de mejorar la experiencia financiera.</li>
-                    <li><span class="fw-bold"></span>Transparencia:</span> Operamos con reglas claras y confianza mutua.</li>
-                    <li><span class="fw-bold">Accesibilidad:</span> Servicios pensados para todos, sin importar la experiencia tecnológica.</li>
-                    <li><span class="fw-bold">Cercanía:</span> Escuchamos a nuestros usuarios y crecemos junto a ellos.</li>
-                </ul>
-                <p>En TucuBank no solo ofrecemos una billetera digital, sino que construimos un ecosistema financiero diseñado para acompañar el presente y proyectar el futuro. Estamos convencidos de que la manera de manejar dinero está cambiando, y queremos ser protagonistas de esa transformación.</p>
-            </div>
-        </section>
+                <!-- SECCION QUINES SOMOS -->
+                <section class="quienes-somos-section mt-4 p-2 px-sm-4 px-md-5">
+                    <div class="flex-column justify-content-center">
+                        <h2 class="text-center text-uppercase fw-bold text-primary-action mb-4">Quienes somos</h2>
+                        <p>
+                            En TucuBank somos una billetera virtual en crecimiento que nace con un propósito claro:
+                            hacer que el manejo del dinero sea más simple, seguro y accesible para todos. Creemos que
+                            las finanzas digitales no deberían ser complicadas ni exclusivas, sino una herramienta
+                            cotidiana que mejore la vida de las personas.
+                            Nuestra plataforma permite enviar, recibir, pagar y administrar dinero de manera rápida e
+                            intuitiva, sin necesidad de trámites engorrosos ni procesos innecesarios. Queremos que cada
+                            usuario sienta que tiene en sus manos un banco del futuro, pero con la facilidad de una app
+                            que lo acompaña en su día a día.
+                        </p>
+                        <h3 class="text-primary-action">Nuestra misión</h3>
+                        <p>
+                            Impulsar la inclusión financiera y brindar soluciones digitales que permitan a cada persona
+                            gestionar su dinero de forma confiable, transparente y ágil.
+                        </p>
+                        <h3 class="text-primary-action">Nuestra visión</h3>
+                        <p>
+                            Convertirnos en la billetera digital líder de la región, reconocida por su innovación,
+                            cercanía con los usuarios y compromiso con la seguridad.
+                        </p>
+                        <h3 class="text-primary-action">Nuestros valores</h3>
+                        <ul>
+                            <li><span class="fw-bold">Seguridad:</span> Tu dinero y tu información siempre protegidos.
+                            </li>
+                            <li><span class="fw-bold">Innovación:</span> Buscamos constantemente nuevas formas de
+                                mejorar la experiencia financiera.</li>
+                            <li><span class="fw-bold"></span>Transparencia:</span> Operamos con reglas claras y
+                                confianza mutua.</li>
+                            <li><span class="fw-bold">Accesibilidad:</span> Servicios pensados para todos, sin importar
+                                la experiencia tecnológica.</li>
+                            <li><span class="fw-bold">Cercanía:</span> Escuchamos a nuestros usuarios y crecemos junto a
+                                ellos.</li>
+                        </ul>
+                        <p>En TucuBank no solo ofrecemos una billetera digital, sino que construimos un ecosistema
+                            financiero diseñado para acompañar el presente y proyectar el futuro. Estamos convencidos de
+                            que la manera de manejar dinero está cambiando, y queremos ser protagonistas de esa
+                            transformación.</p>
+                    </div>
+                </section>
 
-        <!-- SECCION FAQ-->
-         <section>
-            <div class="container my-5">
-                <h2 class="text-center text-uppercase fw-bold text-primary-action mb-4">Preguntas Frecuentes</h2>
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                ¿Cómo puedo abrir una cuenta en TucuBank?
-                            </button>
+                <!-- SECCION FAQ-->
+                <section>
+                    <div class="container my-5">
+                        <h2 class="text-center text-uppercase fw-bold text-primary-action mb-4">Preguntas Frecuentes
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Abrir una cuenta en TucuBank es sencillo y rápido. Solo necesitas descargar nuestra app desde la tienda de aplicaciones, completar el formulario de registro con tus datos personales y seguir las instrucciones para verificar tu identidad. En pocos minutos tendrás tu cuenta lista para usar.
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿Cómo puedo abrir una cuenta en TucuBank?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Abrir una cuenta en TucuBank es sencillo y rápido. Solo necesitas descargar
+                                        nuestra app desde la tienda de aplicaciones, completar el formulario de registro
+                                        con tus datos personales y seguir las instrucciones para verificar tu identidad.
+                                        En pocos minutos tendrás tu cuenta lista para usar.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                ¿Qué tipos de cuentas ofrece TucuBank?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                TucuBank ofrece una cuenta digital gratuita que incluye una tarjeta de débito, acceso a transferencias, pagos y gestión de dinero desde la app. También ofrecemos cuentas premium con beneficios adicionales como tarjetas de crédito, seguros y programas de recompensas.
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ¿Qué tipos de cuentas ofrece TucuBank?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        TucuBank ofrece una cuenta digital gratuita que incluye una tarjeta de débito,
+                                        acceso a transferencias, pagos y gestión de dinero desde la app. También
+                                        ofrecemos cuentas premium con beneficios adicionales como tarjetas de crédito,
+                                        seguros y programas de recompensas.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Cómo puedo contactar al servicio de atención al cliente?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse"></div>
-         </section>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        ¿Cómo puedo contactar al servicio de atención al cliente?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Nuestro equipo de atención al cliente está disponible 24/7 para ayudarte con
+                                        cualquier consulta o problema. Puedes contactarnos a través del chat en la app,
+                                        enviarnos un correo electrónico a tucu_bank@outlook.com
+                                        o llamar al +54 9 351 123-4567.
+                                    </div>
+
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse"></div>
+                            </div>
+                </section>
     </main>
 
-            <section id="contacto" class="py-5">
-            <div class="container">
-                <h2 class="mb-4 text-center text-primary-action text-uppercase fw-bold">Formulario de Contacto</h2>
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center text-primary-action text-uppercase fw-bold">Formulario de Contacto</h2>
 
-                <form class="p-4 rounded shadow-sm bg-card">
-                    <div class="row g-3">
-                        <div class="col-12 col-md-6">
-                            <label for="nombre" class="form-label">Nombre<span class="text-danger">*</span></label>
-                            <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Ejemplo" required>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <label for="apellido" class="form-label">Apellido<span class="text-danger">*</span></label>
-                            <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Ejemplo" required>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <label for="telefono" class="form-label">Teléfono<span class="text-danger">*</span></label>
-                            <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="Ejemplo" required>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <label for="mail" class="form-label">Mail<span class="text-danger">*</span></label>
-                            <input id="mail" name="mail" type="email" class="form-control" placeholder="Ejemplo" required>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="mensaje" class="form-label">Mensaje<span class="text-danger">*</span></label>
-                            <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Ejemplo" required></textarea>
-                        </div>
-
-                        <div class="col-12 text-center mt-3">
-                            <button type="submit" class="btn btn-primary px-5">Enviar</button>
-                        </div>
+            <form class="p-4 rounded shadow-sm bg-card">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <label for="nombre" class="form-label">Nombre<span class="text-danger">*</span></label>
+                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Ejemplo"
+                            required>
                     </div>
-                </form>
-            </div>
-        </section>
+
+                    <div class="col-12 col-md-6">
+                        <label for="apellido" class="form-label">Apellido<span class="text-danger">*</span></label>
+                        <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Ejemplo"
+                            required>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="telefono" class="form-label">Teléfono<span class="text-danger">*</span></label>
+                        <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="Ejemplo"
+                            required>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="mail" class="form-label">Mail<span class="text-danger">*</span></label>
+                        <input id="mail" name="mail" type="email" class="form-control" placeholder="Ejemplo" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje<span class="text-danger">*</span></label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Ejemplo"
+                            required></textarea>
+                    </div>
+
+                    <div class="col-12 text-center mt-3">
+                        <button type="submit" class="btn btn-primary px-5">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <footer class="bg-custom py-5">
         <div class="container">
