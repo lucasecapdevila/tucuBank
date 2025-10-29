@@ -1,253 +1,157 @@
-/* ===== IMPORTACIONES Y CONFIGURACIÓN GLOBAL ===== */
+/* ==========================================================================
+   FUENTES Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 
+:root {
+  /* ===== PALETA BASE (Light Mode) ===== */
+  --color: #072146;
+
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8f9fa;
+
+  --text-primary: #0d1b2a;
+  --text-secondary: #4a5a6a;
+  --text-white: #e8e9ea;
+  --text-light: #d1d3d4;
+
+  --text-accent: #f9a825;
+  --text-action: #1e88e5;
+  --text-action-rgb: 30, 136, 229;
+
+  --text-success: #2e8b57;
+  --text-error: #d32f2f;
+
+  --border-color: #e9ecef;
+
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+
+  --overlay-opacity: 0.5;
+}
+
+/* ===== DARK MODE ===== */
+[data-bs-theme="dark"] {
+  --color: #1b263b;
+
+  --bg-primary: #0d1b2a;
+  --bg-secondary: #1b263b;
+  --bg-tertiary: #1b263b;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b0bec5;
+  --text-white: #ffffff;
+  --text-light: #b0bec5;
+
+  --text-accent: #ffd54f;
+  --text-action: #3fa9f5;
+  --text-action-rgb: 63, 169, 245;
+
+  --text-success: #66bb6a;
+  --text-error: #ef5350;
+
+  --border-color: #4a5a6a;
+
+  --shadow-light: rgba(0, 0, 0, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+
+  --overlay-opacity: 0.7;
+}
+
+/* ===== GLOBAL ===== */
 body {
   font-family: "Montserrat", sans-serif;
-  /* Se establecen los colores base para toda la página */
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:root {
-  --color: #072146;
+/* ==========================================================================
+   UTILIDADES
+   ========================================================================== */
+.text-primary-white { color: #e8e9ea; }
+.text-secondary-white { color: #d1d3d4; }
+.text-light-white { color: #fff; }
 
-  /* Variables para Light Mode */
-  --bg-primary: #f5f7fa;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f8f9fa;
-  --text-primary: #0d1b2a;
-  --text-secondary: #4a5a6a;
-  --text-white: #e8e9ea;
-  --text-light: #d1d3d4;
-  --text-accent: #f9a825;
-  --text-action: #1e88e5;
-  --text-action-rgb: 30, 136, 229;
-  --text-success: #2e8b57;
-  --text-error: #d32f2f;
-  --border-color: #e9ecef;
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-dark: rgba(0, 0, 0, 0.3);
-  --overlay-opacity: 0.5;
-}
+.z-front { z-index: 10; }
+.z-overlay { z-index: 1; }
 
-/* Variables para Dark Mode */
-[data-bs-theme="dark"] {
-  --color: #1b263b; /* Color para Navbar y Footer */
-  --bg-primary: #0d1b2a; /* Fondo principal */
-  --bg-secondary: #1b263b; /* Fondo secundario / tarjetas */
-  --bg-tertiary: #1b263b; /* Fondo terciario */
-  --text-primary: #ffffff; /* Texto principal */
-  --text-secondary: #b0bec5; /* Texto secundario */
-  --text-white: #ffffff; /* Texto blanco */
-  --text-light: #b0bec5; /* Texto claro */
-  --text-accent: #ffd54f; /* Color acento */
-  --text-action: #3fa9f5; /* Color primario (acciones, links) */
-  --text-action-rgb: 63, 169, 245;
-  --text-success: #66bb6a; /* Éxito / validación */
-  --text-error: #ef5350; /* Error / alertas */
-  --border-color: #4a5a6a; /* Bordes */
-  --shadow-light: rgba(0, 0, 0, 0.4);
-  --shadow-dark: rgba(0, 0, 0, 0.6);
-  --overlay-opacity: 0.7;
-}
+.bg-primary-light { background-color: #f5f7fa; }
+.bg-card { background-color: var(--bg-secondary); }
 
-/* Ajusta el logo dentro del navbar */
+.text-primary-dark { color: #0d1b2a; }
+.text-secondary-soft { color: #4a5a6a; }
+.text-primary-action { color: var(--text-action); }
+.text-accent { color: var(--text-accent); }
+.text-success-soft { color: var(--text-success); }
+.text-error { color: var(--text-error); }
+
+.bg-accent { background-color: var(--text-accent); }
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.bg-custom { background-color: var(--color) !important; }
+
 .logo-nav {
   display: block;
   max-height: 100px;
-  width: auto;
   object-fit: contain;
 }
 
-/* ===== UTILIDADES REUTILIZABLES ===== */
-.text-primary-white {
-  color: #e8e9ea;
-}
-.text-secondary-white {
-  color: #d1d3d4;
-}
-.text-light-white {
-  color: #fff;
-}
-.z-front {
-  z-index: 10;
-}
-.z-overlay {
-  z-index: 1;
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
-/* ===== COLORES DEL SISTEMA ===== */
-.bg-primary-light {
-  background-color: #f5f7fa;
+/* Links */
+.navbar .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
 }
-.bg-card {
-  background-color: var(--bg-secondary);
-}
-.text-primary-dark {
-  color: #0d1b2a;
-}
-.text-secondary-soft {
-  color: #4a5a6a;
-}
-.text-primary-action {
-  color: #1e88e5;
-}
-.text-accent {
-  color: #f9a825;
-}
-.text-success-soft {
-  color: #2e8b57;
-}
-.text-error {
-  color: #d32f2f;
-}
-.bg-accent {
-  background-color: #f9a825;
+.navbar .nav-link:hover { color: grey !important; }
+.navbar .nav-link.active {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* ===== FORMULARIO DE CONTACTO ===== */
-.form-control {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-}
-.form-control:focus {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  border-color: var(--text-action);
-  box-shadow: 0 0 0 0.25rem rgba(var(--text-action-rgb), 0.25); /* Se necesita var --text-action-rgb */
-}
-.form-label {
-  color: var(--text-secondary);
+/* Accesibilidad */
+.navbar a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
-textarea.form-control {
-  resize: none;
-}
-
-/* ===== FOOTER ===== */
-.footer-bg {
-  /* Mismo fondo azul oscuro del navbar */
-  background-color: var(--color) !important; 
-}
-
-.footer-title,
-.tucubank-logo {
-  /* Títulos y logo en blanco, como en el navbar */
-  color: var(--text-white) !important; 
-}
-
-.footer-link {
-  /* Enlaces en un gris claro para diferenciarse */
-  color: var(--text-light) !important; 
-}
-
-.footer-link:hover {
-  /* Hover con el color de acento */
-  color: var(--text-accent) !important; 
-}
-
-/* Ajuste de botones de descarga para el nuevo footer oscuro */
-.footer-bg .btn-download {
-    border: 1px solid var(--text-light);
-    transition: all 0.3s ease;
-}
-
-.footer-bg .btn-download:hover {
-    border-color: var(--text-accent);
-    background-color: transparent;
-}
-
-
-/* ===== FORMULARIO DE CONTACTO ===== */
-.form-label {
-    color: var(--text-secondary);
-}
-
-.form-control {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
-}
-
-.form-control:focus {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    border-color: var(--text-action);
-    box-shadow: 0 0 0 0.2rem rgba(var(--text-action-rgb), 0.25);
-}
-
-.form-control::placeholder {
-  color: var(--text-secondary);
-  opacity: 0.7;
-}
-
-/* Estilos personalizados para el formulario de contacto en Dark Mode */
-[data-bs-theme="dark"] form.bg-card {
-  background-color: rgb(33, 37, 41) !important; /* Usamos el color específico y !important como refuerzo */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Un borde sutil para definir el contenedor */
-}
-
-[data-bs-theme="dark"] #contacto .form-control {
-  background-color: var(--bg-primary);
-}
-
-[data-bs-theme="dark"] #contacto .form-control:focus {
-  background-color: var(--bg-secondary);
-}
-
-/* Iconos sociales */
-.social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.social-icon:hover {
-  transform: translateY(-2px);
-  color: white;
-}
-.social-tiktok {
-  background-color: #000;
-  color: white;
-}
-.social-instagram {
-  background-color: #e4405f;
-  color: white;
-}
-.social-twitter {
-  background-color: #1da1f2;
-  color: white;
-}
-.social-linkedin {
-  background-color: #0077b5;
-  color: white;
-}
-
-/* Botones de descarga */
-.btn-download {
-  border-radius: 12px;
-  padding: 12px 24px;
+/* Botón Ingresar */
+.btn-ingresar {
   font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 12px;
-  width: 200px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.btn-download:hover {
-  transform: translateY(-2px);
-  color: white;
+  border-width: 2px;
+  padding: 0.45rem 1rem;
 }
 
-/* ===== CAROUSEL BASE ===== */
+/* ===== Navbar responsive ===== */
+@media (max-width: 991.98px) {
+  .btn-ingresar {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-collapse .nav-link {
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .navbar-collapse .nav-link:active {
+    background: lightgray;
+  }
+}
+
+/* ==========================================================================
+   CAROUSEL
+   ========================================================================== */
 .carousel {
   max-height: 500px;
   overflow: hidden;
@@ -262,49 +166,44 @@ textarea.form-control {
   object-position: center;
 }
 
-/* Overlay universal */
+/* Overlay */
 .carousel-item::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, var(--overlay-opacity));
   pointer-events: none;
   z-index: 1;
 }
 
-/* ===== CAROUSEL CAPTIONS ===== */
+/* Captions */
 .carousel-caption {
   position: absolute;
   bottom: 3rem;
   left: 3rem;
-  right: auto;
-  z-index: 10;
-  padding: 0;
   text-align: left;
   max-width: 500px;
+  z-index: 10;
 }
 .carousel-caption h3 {
   font-size: 2.8rem;
   font-weight: 800;
-  margin-bottom: 1rem;
   color: var(--text-white);
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 .carousel-caption p {
   font-size: 1.3rem;
-  margin-bottom: 1.8rem;
   color: var(--text-light);
   line-height: 1.5;
+  margin-bottom: 1.8rem;
 }
 .carousel-caption .btn {
   padding: 12px 30px;
   font-size: 1.1rem;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px var(--shadow-dark);
 }
@@ -313,7 +212,7 @@ textarea.form-control {
   box-shadow: 0 6px 20px var(--shadow-dark);
 }
 
-/* Variantes de posicionamiento */
+/* Variantes */
 .carousel-caption.text-center {
   left: 50%;
   transform: translateX(-50%);
@@ -321,7 +220,6 @@ textarea.form-control {
   max-width: 600px;
 }
 .carousel-caption.text-right {
-  left: auto;
   right: 3rem;
   text-align: right;
 }
@@ -332,346 +230,59 @@ textarea.form-control {
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: auto;
-  right: auto;
   width: 100%;
-  max-width: none;
 }
 
 /* Botón personalizado */
 .btn-custom-yellow {
-  background-color: var(--text-accent) !important;  /* Light: #F9A825, Dark: #FFD54F */
+  background-color: var(--text-accent) !important;
   border-color: var(--text-accent) !important;
-  color: var(--bg-primary) !important;              /* Light: #F5F7FA, Dark: #0D1B2A para contraste */
+  color: var(--bg-primary) !important;
   font-weight: 600;
 }
+.btn-custom-yellow:hover { opacity: 0.9; }
 
-/* Hover para el botón acento */
-.btn-custom-yellow:hover {
-  opacity: 0.9;
-}
+/* ==========================================================================
+   FORMULARIOS
+   ========================================================================== */
+.form-label { color: var(--text-secondary); }
 
-/* ===== MCDONALDS SECTION ===== */
-/* Textos principales */
-.mcdonalds-title-text {
-  font-size: 3.5rem;
-  color: var(--text-white);
-  position: relative;
-  z-index: 10;
-}
-.mcdonalds-subtitle-text {
-  font-size: 1.5rem;
-  color: var(--text-light);
-  position: relative;
-  z-index: 10;
-}
-.mcdonalds-text-container {
-  position: relative;
-  z-index: 10;
-}
-
-/* Cards base - estilos comunes */
-.mcdonalds-card {
-  backdrop-filter: blur(10px);
-  min-width: 150px;
-  border: 2px solid transparent !important;
+.form-control {
   background-color: var(--bg-secondary);
-  color: var(--text-white);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-/* Colores específicos por tipo de card */
-.mcdonalds-bigmac-card {
-  background: rgba(211, 47, 47, 0.4);
-  border-color: rgba(211, 47, 47, 0.8) !important;
-}
-.mcdonalds-nuggets-card {
-  background: rgba(46, 139, 87, 0.4);
-  border-color: rgba(46, 139, 87, 0.8) !important;
-}
-.mcdonalds-postres-card {
-  background: rgba(30, 136, 229, 0.4);
-  border-color: rgba(30, 136, 229, 0.8) !important;
-}
-.mcdonalds-validez-card {
-  background: rgba(74, 90, 106, 0.4);
-  border-color: rgba(74, 90, 106, 0.8) !important;
-  min-width: 140px;
+.form-control:focus {
+  border-color: var(--text-action);
+  box-shadow: 0 0 0 0.25rem rgba(var(--text-action-rgb), 0.25);
 }
 
-/* Colores específicos adaptados para dark mode */
-[data-bs-theme="dark"] .mcdonalds-bigmac-card {
-  background: rgba(239, 83, 80, 0.3);    /* Tu color de error con transparencia */
-  border-color: rgba(239, 83, 80, 0.7) !important;
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
 }
 
-[data-bs-theme="dark"] .mcdonalds-nuggets-card {
-  background: rgba(102, 187, 106, 0.3);  /* Tu color de éxito con transparencia */
-  border-color: rgba(102, 187, 106, 0.7) !important;
+textarea.form-control { resize: none; }
+
+/* Dark Mode form adjustments */
+[data-bs-theme="dark"] form.bg-card {
+  background-color: rgb(33, 37, 41) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-[data-bs-theme="dark"] .mcdonalds-postres-card {
-  background: rgba(63, 169, 245, 0.3);   /* Tu color primario con transparencia */
-  border-color: rgba(63, 169, 245, 0.7) !important;
+[data-bs-theme="dark"] #contacto .form-control {
+  background-color: var(--bg-primary);
 }
 
-[data-bs-theme="dark"] .mcdonalds-validez-card {
-  background: rgba(255, 213, 79, 0.3);   /* Tu color acento con transparencia */
-  border-color: rgba(255, 213, 79, 0.7) !important;
+[data-bs-theme="dark"] #contacto .form-control:focus {
+  background-color: var(--bg-secondary);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-/* Móviles (<768px) */
-@media (max-width: 767.98px) {
-  /* Carousel captions responsive */
-  .carousel-caption {
-    left: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    max-width: none;
-    text-align: center;
-  }
-  .carousel-caption h3 {
-    font-size: 2rem;
-  }
-  .carousel-caption p {
-    font-size: 1.1rem;
-  }
-  .carousel-caption .btn {
-    padding: 12px 25px;
-    font-size: 1rem;
-  }
-  .carousel-caption.text-center {
-    transform: none;
-    left: 2rem;
-  }
-  .carousel-caption.text-right {
-    right: 2rem;
-    text-align: center;
-  }
-
-  /* Primera imagen móvil */
-  .carousel-item:first-child .carousel-caption {
-    position: absolute;
-    top: auto;
-    left: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    transform: none;
-    width: auto;
-    max-width: none;
-  }
-
-  /* McDonalds móvil */
-  .mcdonalds-bigmac-position,
-  .mcdonalds-nuggets-position,
-  .mcdonalds-postres-position {
-    display: none !important;
-  }
-
-  .mcdonalds-mobile-cards {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    width: 100%;
-  }
-
-  .mcdonalds-mobile-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.25rem;
-    align-items: stretch;
-    min-height: 80px;
-  }
-
-  .mcdonalds-mobile-card {
-    min-width: auto !important;
-    width: 100%;
-    height: 100%;
-    font-size: 0.75rem;
-  }
-  .mcdonalds-mobile-card .card-body {
-    padding: 0.5rem 0.25rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  .mcdonalds-mobile-card .display-5 {
-    font-size: 1.2rem !important;
-  }
-  .mcdonalds-mobile-card h6 {
-    font-size: 0.7rem !important;
-    margin-bottom: 0.2rem !important;
-  }
-  .mcdonalds-mobile-card small {
-    font-size: 0.6rem !important;
-  }
-  .mcdonalds-mobile-card .fas {
-    font-size: 1rem !important;
-    margin-bottom: 0.3rem !important;
-  }
-  .mcdonalds-mobile-card p {
-    font-size: 0.6rem !important;
-    margin-bottom: 0 !important;
-    line-height: 1.2;
-  }
-
-  /* Textos principales móvil */
-  .mcdonalds-title-text {
-    font-size: 2rem !important;
-  }
-  .mcdonalds-subtitle-text {
-    font-size: 1rem !important;
-  }
-}
-
-/* Tablets y Desktop (≥768px) */
-@media (min-width: 768px) {
-  /* Ocultar elementos absolutamente posicionados */
-  .mcdonalds-bigmac-position,
-  .mcdonalds-nuggets-position,
-  .mcdonalds-postres-position {
-    display: none !important;
-  }
-
-  /* Layout 2 columnas para McDonalds */
-  .mcdonalds-text-left {
-    position: absolute;
-    left: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 35%;
-  }
-
-  .mcdonalds-desktop-cards {
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    width: 45%;
-  }
-
-  .mcdonalds-desktop-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    height: 200px;
-  }
-
-  .mcdonalds-desktop-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .mcdonalds-desktop-card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 1rem;
-  }
-  .mcdonalds-desktop-card .display-5 {
-    font-size: 1.8rem;
-  }
-  .mcdonalds-desktop-card h6 {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  .mcdonalds-desktop-card small {
-    font-size: 0.75rem;
-  }
-  .mcdonalds-desktop-card .fas {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .mcdonalds-desktop-card p {
-    font-size: 0.75rem;
-    margin-bottom: 0;
-    line-height: 1.2;
-    text-align: center;
-  }
-}
-
-/* Desktop grande (≥992px) */
-@media (min-width: 992px) {
-  .mcdonalds-text-left {
-    left: 12%;
-    width: 32%;
-  }
-  .mcdonalds-desktop-cards {
-    right: 12%;
-    width: 40%;
-  }
-}
-
-.bg-custom {
-  background-color: var(--color) !important;
-}
-
-.navbar-brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-/* Colores blancos para los links del nav */
-.navbar .nav-link {
-  color: #fff !important;
-}
-
-/*  hover para los links */
-.navbar .nav-link:hover {
-  color: grey !important;
-}
-
-/* explicado en criollo, esto hace que el link de la página en la que estás ejemplo: Cuentas, resalte fuerte por que el html tiene active al lado de nav link. */
-.navbar .nav-link.active {
-  color: #fff !important;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Accesibilidad: foco visible al navegar con teclado */
-.navbar a:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
-
-/* el boton ingresar para pc.*/
-.btn-ingresar {
-  font-weight: 600;
-  border-width: 2px;
-  padding: 0.45rem 1rem;
-}
-
-/* tenia que hacer mobile firts, pero re colgue y hice desktop primero, chupenla si no les gusta. */
-@media (max-width: 991.98px) {
-  .btn-ingresar {
-    display: block;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-
-  /* Links un toque mejor para mobile */
-  .navbar-collapse .nav-link {
-    padding: 0.75rem 0.5rem;
-    border-radius: 0.5rem;
-  }
-
-  /* Feedback al tocar */
-  .navbar-collapse .nav-link:active {
-    background: lightgray;
-  }
-}
-.footer-bg {
-  background-color: var(--bg-primary) !important;
-}
+/* ==========================================================================
+   REDES SOCIALES
+   ========================================================================== */
 .social-icon {
   width: 40px;
   height: 40px;
@@ -683,183 +294,136 @@ textarea.form-control {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.social-tiktok {
-  background-color: #000;
-  color: white;
-}
-.social-instagram {
-  background-color: #e4405f;
-  color: white;
-}
-.social-twitter {
-  background-color: #1da1f2;
-  color: white;
-}
-.social-linkedin {
-  background-color: #0077b5;
-  color: white;
-}
-.social-icon:hover {
-  transform: translateY(-2px);
-  color: white;
-}
+.social-icon:hover { transform: translateY(-2px); color: white; }
+
+.social-tiktok { background-color: #000; color: white; }
+.social-instagram { background-color: #e4405f; color: white; }
+.social-twitter { background-color: #1da1f2; color: white; }
+.social-linkedin { background-color: #0077b5; color: white; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-bg { background-color: var(--color) !important; }
+
+.footer-title,
+.tucubank-logo { color: var(--text-white) !important; }
+
 .footer-link {
-  color: var(--text-secondary);
+  color: var(--text-light);
   text-decoration: none;
-  font-size: 14px;
-  line-height: 1.6;
   transition: color 0.3s ease;
 }
-.footer-link:hover {
-  color: var(--text-action);
+.footer-link:hover { color: var(--text-accent) !important; }
+
+.footer-bg .btn-download {
+  border: 1px solid var(--text-light);
+  transition: all 0.3s ease;
 }
-.footer-title {
-  color: var(--text-action);
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 16px;
+.footer-bg .btn-download:hover {
+  border-color: var(--text-accent);
+  background-color: transparent;
 }
+
+/* Botones secundarios */
 .btn-download {
   border-radius: 12px;
   padding: 12px 24px;
   font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 12px;
   width: 200px;
   text-align: center;
+  margin-bottom: 12px;
+  display: inline-block;
   transition: all 0.3s ease;
 }
-/* Botón "Arrepentimiento" */
+.btn-download:hover { transform: translateY(-2px); color: white; }
+
 .btn-green {
   background-color: var(--text-action);
   color: var(--text-white);
   border: 1px solid var(--text-action);
 }
-
 .btn-green:hover {
-   background-color: transparent;
-   color: var(--text-action);
+  background-color: transparent;
+  color: var(--text-action);
 }
 
-/* Botón "Defensa del Consumidor" - Estilo Inverso Blanco */
 .btn-orange {
   background-color: transparent;
   color: var(--text-white);
   border: 1px solid var(--text-white);
 }
-
 .btn-orange:hover {
-  background-color: var(--text-white);
-  color: var(--color); /* El texto toma el color de fondo del footer */
+  background-color: rgba(42, 99, 221, 0.89);
+  color: var(--color);
   border-color: var(--text-white);
 }
-.btn-download:hover {
-  transform: translateY(-2px);
-  color: white;
-}
-.tucubank-logo {
-  color: var(--text-action);
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-}
 
-/* ===== QUINES SOMOS SECTION ===== */
+/* ==========================================================================
+   SECCIÓN QUIÉNES SOMOS
+   ========================================================================== */
 .quienes-somos-section {
-  background-color: var(--bg-primary); /* Light: #F5F7FA, Dark: #0D1B2A */
-  color: var(--text-primary);          /* Light: #0D1B2A, Dark: #FFFFFF */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
-
-/* Títulos principales de la sección */
 .quienes-somos-section .text-primary-action {
-  color: var(--text-action) !important; /* Light: #1E88E5, Dark: #3FA9F5 */
+  color: var(--text-action) !important;
 }
-
-/* Párrafos y texto general */
 .quienes-somos-section p,
 .quienes-somos-section li {
-  color: var(--text-secondary); /* Light: #4A5A6A, Dark: #B0BEC5 */
+  color: var(--text-secondary);
 }
-
-/* Texto en negrita dentro de la lista de valores */
 .quienes-somos-section li .fw-bold {
-  color: var(--text-action); /* Antes era --text-accent, ahora es el azul de acciones */
+  color: var(--text-action);
 }
-
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .quienes-somos-section {
-    padding-left: 12rem !important;
-    padding-right: 12rem !important;
+    padding: 0 12rem !important;
   }
 }
 
-/* sliders img y coso */
-
-/* === SLIDER DE LOGOS === */
+/* ==========================================================================
+   SLIDER DE LOGOS
+   ========================================================================== */
 .logos-slider {
-  background-color: #0b1e35; /* tono acorde al TucuBank */
+  background-color: #0b1e35;
   overflow: hidden;
   position: relative;
 }
-
 .logos-track {
   display: flex;
-  width: calc(250px * 12); /* 6 logos x 2 duplicados */
+  width: calc(250px * 12);
   animation: scroll 30s linear infinite;
 }
-
 .logos-slider:hover .logos-track {
   animation-play-state: paused;
 }
-
 .logos-slide {
   display: flex;
   gap: 3rem;
   align-items: center;
-  margin-right: 3rem; /* <-- nuevo: separa el final del bloque y evita el "pegado" */
+  margin-right: 3rem;
 }
-
-
 .logos-slide img {
-  max-height: 60px;        /* altura máxima uniforme */
-  max-width: 120px;        /* ancho máximo controlado */
-  width: auto;
-  height: auto;
-  object-fit: contain;     /* mantiene proporciones */
+  max-height: 60px;
+  max-width: 120px;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  padding: 8px 12px;       /* espacio interno para respiración */
-  background-color: transparent; /* fondo limpio */
+  padding: 8px 12px;
 }
-
-
-.logos-slide img:hover {
-  filter: grayscale(0%);
-}
+.logos-slide img:hover { filter: grayscale(0%); }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* Aseguramos que no se mueva si el usuario tiene "reduce motion" */
 @media (prefers-reduced-motion: reduce) {
-  .logos-track {
-    animation: none;
-  }
+  .logos-track { animation: none; }
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
-  .logos-slide img {
-    height: 48px;
-  }
-  .logos-slide {
-    gap: 1.5rem;
-  }
+  .logos-slide img { height: 48px; }
+  .logos-slide { gap: 1.5rem; }
 }
