@@ -1,0 +1,77 @@
+/* Estilos para el switch de tema */
+.theme-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  padding: 0;
+  border: none !important;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #060c13;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switch::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 2px;
+  top: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .theme-switch {
+  background-color: #3fa9f5;
+}
+
+[data-bs-theme="dark"] .theme-switch::before {
+  transform: translateX(30px);
+}
+
+.theme-switch:focus {
+  box-shadow: 0 0 0 0.25rem rgba(63, 169, 245, 0.25);
+}
+
+.theme-switch i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.theme-switch .fa-sun {
+  color: #ffd54f; /* Amarillo cálido para el sol */
+}
+
+.theme-switch .fa-moon {
+  color: #b0bec5; /* Gris plateado para la luna */
+}
+
+.theme-switch .fa-sun {
+  right: 7px;
+  opacity: 0;
+}
+
+.theme-switch .fa-moon {
+  left: 7px;
+  opacity: 1;
+}
+
+[data-bs-theme="dark"] .theme-switch .fa-sun {
+  opacity: 1;
+}
+
+[data-bs-theme="dark"] .theme-switch .fa-moon {
+  opacity: 0;
+}
+
+/* Ajuste de margen para dispositivos pequeños */
+@media (max-width: 991.98px) {
+  .theme-switch {
+    margin-top: 1rem !important;
+  }
+}
