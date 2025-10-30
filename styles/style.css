@@ -159,6 +159,75 @@ textarea.form-control {
     background-color: transparent;
 }
 
+/* ===== FOOTER: MOBILE-FIRST CENTERING ===== */
+/* Por defecto (mobile) centramos todo el contenido del footer */
+footer.bg-custom {
+  text-align: center;
+}
+
+footer.bg-custom .tucubank-logo,
+footer.bg-custom .tucubank-logo img {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+footer.bg-custom .social-links,
+footer.bg-custom .download-buttons,
+footer.bg-custom .footer-title,
+footer.bg-custom .footer-link,
+footer.bg-custom .list-unstyled {
+  text-align: center;
+}
+
+footer.bg-custom .btn-download {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Controlamos el tamaño del logo en el footer (mobile-first) */
+footer.bg-custom .logo-nav {
+  max-width: 160px;
+  height: auto;
+}
+
+/* En pantallas md+ restauramos la alineación original (izquierda) */
+@media (min-width: 768px) {
+  footer.bg-custom .tucubank-logo,
+  footer.bg-custom .social-links,
+  footer.bg-custom .download-buttons {
+    text-align: left;
+  }
+
+  footer.bg-custom .footer-title,
+  footer.bg-custom .list-unstyled {
+    text-align: left;
+  }
+}
+
+/* Evitamos tocar el padding del .container (evita conflictos con los gutters de .row).
+   En su lugar reducimos el padding interno de elementos concretos en mobile. */
+footer.bg-custom .download-buttons {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Separación ligeramente menor entre iconos sociales en mobile */
+footer.bg-custom .social-links .social-icon {
+  margin-right: 6px;
+}
+
+@media (min-width: 768px) {
+  /* Restaurar padding en desktop */
+  footer.bg-custom .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer.bg-custom .download-buttons .btn-download {
+    width: 200px; /* regresamos a un tamaño fijo en desktop si se quiere */
+  }
+}
+
 
 /* ===== FORMULARIO DE CONTACTO ===== */
 .form-label {
@@ -233,12 +302,13 @@ textarea.form-control {
 /* Botones de descarga */
 .btn-download {
   border-radius: 12px;
-  padding: 12px 24px;
+  padding: 12px 16px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
-  margin-bottom: 12px;
-  width: 200px;
+  display: block; /* mobile-first: botones a bloque para ocupar ancho */
+  margin: 8px auto; /* centrados */
+  width: 90%; /* ocupar la mayor parte del ancho disponible en móviles */
+  max-width: 220px; /* tope razonable */
   text-align: center;
   transition: all 0.3s ease;
 }
